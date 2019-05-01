@@ -1,0 +1,1227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="seekios_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="seekios_dbEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="DeleteModeById">
+      <Parameter Name="IdMode" Mode="In" Type="Int32" />
+      <Parameter Name="Result" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteSeekiosById">
+      <Parameter Name="IdSeekios" Mode="In" Type="Int32" />
+      <Parameter Name="result" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteSeekiosInstructionByIdSeekios">
+      <Parameter Name="IdSeekios" Mode="In" Type="Int32" />
+      <Parameter Name="InstructionType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteUserByIDuser">
+      <Parameter Name="iduser" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GenerateToken">
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+      <Parameter Name="ReturnException" Mode="InOut" Type="Int32" />
+      <Parameter Name="ReturnToken" Mode="InOut" Type="String" />
+      <Parameter Name="ReturnDateCreation" Mode="InOut" Type="DateTime" />
+      <Parameter Name="ReturnDateExpires" Mode="InOut" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="GetAlertAndAlertSOSByUser" EntitySet="alert" ReturnType="Collection(seekios_dbModel.alert)">
+      <Parameter Name="idUser" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetAlertRecipientAndAlertRecipientSOSByUser" EntitySet="alertRecipient" ReturnType="Collection(seekios_dbModel.alertRecipient)">
+      <Parameter Name="idUser" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllSeekiosByUser" EntitySet="seekios" ReturnType="Collection(seekios_dbModel.seekios)">
+      <Parameter Name="iduser" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetLowerDateAndUpperDate">
+      <Parameter Name="IdSeekios" Mode="In" Type="Int32" />
+      <Parameter Name="UpperDate" Mode="InOut" Type="DateTime" />
+      <Parameter Name="LowerDate" Mode="InOut" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateSeekiosFreeCreditById">
+      <Parameter Name="IdSeekios" Mode="In" Type="Int32" />
+      <Parameter Name="ValueToSubstract" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateSeekiosHasGetLastInstruction">
+      <Parameter Name="IdSeekios" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateSeekiosProductionFirstAssociation">
+      <Parameter Name="imei" Mode="In" Type="String" />
+      <Parameter Name="credit" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertMode">
+      <Parameter Name="IdUser" Mode="In" Type="Int32" />
+      <Parameter Name="IdSeekios" Mode="In" Type="Int32" />
+      <Parameter Name="IdDevice" Mode="In" Type="Int32" />
+      <Parameter Name="Trame" Mode="In" Type="String" />
+      <Parameter Name="IdModeDefinition" Mode="In" Type="Int32" />
+      <Parameter Name="IsPowerSavingEnabled" Mode="In" Type="Boolean" />
+      <Parameter Name="timeRefreshTracking" Mode="In" Type="Int32" />
+      <Parameter Name="timeDiffHours" Mode="In" Type="Int32" />
+      <Parameter Name="timeActivation" Mode="In" Type="Int32" />
+      <Parameter Name="timeDesactivation" Mode="In" Type="Int32" />
+      <Parameter Name="maxLocation" Mode="In" Type="Int32" />
+      <Parameter Name="ResultExceptionOrNewIdMode" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="alert" EntityType="seekios_dbModel.alert" />
+    <EntitySet Name="alertDefinition" EntityType="seekios_dbModel.alertDefinition" />
+    <EntitySet Name="alertRecipient" EntityType="seekios_dbModel.alertRecipient" />
+    <EntitySet Name="connection" EntityType="seekios_dbModel.connection" />
+    <EntitySet Name="countryResources" EntityType="seekios_dbModel.countryResources" />
+    <EntitySet Name="device" EntityType="seekios_dbModel.device" />
+    <EntitySet Name="friendship" EntityType="seekios_dbModel.friendship" />
+    <EntitySet Name="historyAlert" EntityType="seekios_dbModel.historyAlert" />
+    <EntitySet Name="historyMode" EntityType="seekios_dbModel.historyMode" />
+    <EntitySet Name="location" EntityType="seekios_dbModel.location" />
+    <EntitySet Name="locationDefinition" EntityType="seekios_dbModel.locationDefinition" />
+    <EntitySet Name="logExceptionSeekios" EntityType="seekios_dbModel.logExceptionSeekios" />
+    <EntitySet Name="logExceptionSES" EntityType="seekios_dbModel.logExceptionSES" />
+    <EntitySet Name="logVodafoneAndOnesignal" EntityType="seekios_dbModel.logVodafoneAndOnesignal" />
+    <EntitySet Name="mode" EntityType="seekios_dbModel.mode" />
+    <EntitySet Name="modeDefinition" EntityType="seekios_dbModel.modeDefinition" />
+    <EntitySet Name="operation" EntityType="seekios_dbModel.operation" />
+    <EntitySet Name="operationFromStore" EntityType="seekios_dbModel.operationFromStore" />
+    <EntitySet Name="operationType" EntityType="seekios_dbModel.operationType" />
+    <EntitySet Name="packCredit" EntityType="seekios_dbModel.packCredit" />
+    <EntitySet Name="seekios" EntityType="seekios_dbModel.seekios" />
+    <EntitySet Name="seekiosCommunication" EntityType="seekios_dbModel.seekiosCommunication" />
+    <EntitySet Name="seekiosHardwareReport" EntityType="seekios_dbModel.seekiosHardwareReport" />
+    <EntitySet Name="seekiosInstruction" EntityType="seekios_dbModel.seekiosInstruction" />
+    <EntitySet Name="seekiosProduction" EntityType="seekios_dbModel.seekiosProduction" />
+    <EntitySet Name="sharing" EntityType="seekios_dbModel.sharing" />
+    <EntitySet Name="statusDefinition" EntityType="seekios_dbModel.statusDefinition" />
+    <EntitySet Name="token" EntityType="seekios_dbModel.token" />
+    <EntitySet Name="user" EntityType="seekios_dbModel.user" />
+    <EntitySet Name="versionApplication" EntityType="seekios_dbModel.versionApplication" />
+    <EntitySet Name="versionEmbedded" EntityType="seekios_dbModel.versionEmbedded" />
+    <EntitySet Name="historySeekios" EntityType="seekios_dbModel.historySeekios" />
+    <EntitySet Name="alertAndAlertRecipient" EntityType="seekios_dbModel.alertAndAlertRecipient" />
+    <EntitySet Name="packCreditAndOperationType" EntityType="seekios_dbModel.packCreditAndOperationType" />
+    <AssociationSet Name="fk_alert_alertDefinition1" Association="seekios_dbModel.fk_alert_alertDefinition1">
+      <End Role="alertDefinition" EntitySet="alertDefinition" />
+      <End Role="alert" EntitySet="alert" />
+    </AssociationSet>
+    <AssociationSet Name="fk_alert_mode1" Association="seekios_dbModel.fk_alert_mode1">
+      <End Role="mode" EntitySet="mode" />
+      <End Role="alert" EntitySet="alert" />
+    </AssociationSet>
+    <AssociationSet Name="fk_alertRecipient_alert1" Association="seekios_dbModel.fk_alertRecipient_alert1">
+      <End Role="alert" EntitySet="alert" />
+      <End Role="alertRecipient" EntitySet="alertRecipient" />
+    </AssociationSet>
+    <AssociationSet Name="fk_seekios_alert_idalert" Association="seekios_dbModel.fk_seekios_alert_idalert">
+      <End Role="alert" EntitySet="alert" />
+      <End Role="seekios" EntitySet="seekios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_connection_user_iduser" Association="seekios_dbModel.FK_connection_user_iduser">
+      <End Role="user" EntitySet="user" />
+      <End Role="connection" EntitySet="connection" />
+    </AssociationSet>
+    <AssociationSet Name="fk_user_countryResources" Association="seekios_dbModel.fk_user_countryResources">
+      <End Role="countryResources" EntitySet="countryResources" />
+      <End Role="user" EntitySet="user" />
+    </AssociationSet>
+    <AssociationSet Name="FK_device_user_iduser" Association="seekios_dbModel.FK_device_user_iduser">
+      <End Role="user" EntitySet="user" />
+      <End Role="device" EntitySet="device" />
+    </AssociationSet>
+    <AssociationSet Name="fk_friendship_friend" Association="seekios_dbModel.fk_friendship_friend">
+      <End Role="user" EntitySet="user" />
+      <End Role="friendship" EntitySet="friendship" />
+    </AssociationSet>
+    <AssociationSet Name="fk_friendship_user" Association="seekios_dbModel.fk_friendship_user">
+      <End Role="user" EntitySet="user" />
+      <End Role="friendship" EntitySet="friendship" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sharing_friendship" Association="seekios_dbModel.fk_sharing_friendship">
+      <End Role="friendship" EntitySet="friendship" />
+      <End Role="sharing" EntitySet="sharing" />
+    </AssociationSet>
+    <AssociationSet Name="FK__location__locati__60E75331" Association="seekios_dbModel.FK__location__locati__60E75331">
+      <End Role="locationDefinition" EntitySet="locationDefinition" />
+      <End Role="location" EntitySet="location" />
+    </AssociationSet>
+    <AssociationSet Name="FK_location_seekios_idseekios" Association="seekios_dbModel.FK_location_seekios_idseekios">
+      <End Role="seekiosProduction" EntitySet="seekiosProduction" />
+      <End Role="location" EntitySet="location" />
+    </AssociationSet>
+    <AssociationSet Name="FK__seekios__lastKno__61DB776A" Association="seekios_dbModel.FK__seekios__lastKno__61DB776A">
+      <End Role="locationDefinition" EntitySet="locationDefinition" />
+      <End Role="seekios" EntitySet="seekios" />
+    </AssociationSet>
+    <AssociationSet Name="fk_mode_device_statusDefinition_idstatusDefinition" Association="seekios_dbModel.fk_mode_device_statusDefinition_idstatusDefinition">
+      <End Role="statusDefinition" EntitySet="statusDefinition" />
+      <End Role="mode" EntitySet="mode" />
+    </AssociationSet>
+    <AssociationSet Name="fk_mode_modeDefinition_idmodeDefinition" Association="seekios_dbModel.fk_mode_modeDefinition_idmodeDefinition">
+      <End Role="modeDefinition" EntitySet="modeDefinition" />
+      <End Role="mode" EntitySet="mode" />
+    </AssociationSet>
+    <AssociationSet Name="fk_mode_seekios_idseekios" Association="seekios_dbModel.fk_mode_seekios_idseekios">
+      <End Role="seekios" EntitySet="seekios" />
+      <End Role="mode" EntitySet="mode" />
+    </AssociationSet>
+    <AssociationSet Name="fk_operation_operationType" Association="seekios_dbModel.fk_operation_operationType">
+      <End Role="operationType" EntitySet="operationType" />
+      <End Role="operation" EntitySet="operation" />
+    </AssociationSet>
+    <AssociationSet Name="fk_user_user_iduser" Association="seekios_dbModel.fk_user_user_iduser">
+      <End Role="user" EntitySet="user" />
+      <End Role="operation" EntitySet="operation" />
+    </AssociationSet>
+    <AssociationSet Name="fk_seekios_seekiosProduction1" Association="seekios_dbModel.fk_seekios_seekiosProduction1">
+      <End Role="seekiosProduction" EntitySet="seekiosProduction" />
+      <End Role="seekios" EntitySet="seekios" />
+    </AssociationSet>
+    <AssociationSet Name="fk_seekios_user1" Association="seekios_dbModel.fk_seekios_user1">
+      <End Role="user" EntitySet="user" />
+      <End Role="seekios" EntitySet="seekios" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sharing_seekios" Association="seekios_dbModel.fk_sharing_seekios">
+      <End Role="seekios" EntitySet="seekios" />
+      <End Role="sharing" EntitySet="sharing" />
+    </AssociationSet>
+    <AssociationSet Name="fk_seekiosInstruction_seekiosProduction" Association="seekios_dbModel.fk_seekiosInstruction_seekiosProduction">
+      <End Role="seekiosProduction" EntitySet="seekiosProduction" />
+      <End Role="seekiosInstruction" EntitySet="seekiosInstruction" />
+    </AssociationSet>
+    <AssociationSet Name="fk_seekiosProduction_versionEmbedded" Association="seekios_dbModel.fk_seekiosProduction_versionEmbedded">
+      <End Role="versionEmbedded" EntitySet="versionEmbedded" />
+      <End Role="seekiosProduction" EntitySet="seekiosProduction" />
+    </AssociationSet>
+    <AssociationSet Name="fk_token_user_iduser" Association="seekios_dbModel.fk_token_user_iduser">
+      <End Role="user" EntitySet="user" />
+      <End Role="token" EntitySet="token" />
+    </AssociationSet>
+    <EntitySet Name="historyLocation" EntityType="seekios_dbModel.historyLocation" />
+    <AssociationSet Name="FK__historyLo__locat__5090EFD7" Association="seekios_dbModel.FK__historyLo__locat__5090EFD7">
+      <End Role="locationDefinition" EntitySet="locationDefinition" />
+      <End Role="historyLocation" EntitySet="historyLocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_historyLocation_seekios_idseekios" Association="seekios_dbModel.FK_historyLocation_seekios_idseekios">
+      <End Role="seekiosProduction" EntitySet="seekiosProduction" />
+      <End Role="historyLocation" EntitySet="historyLocation" />
+    </AssociationSet>
+    <EntitySet Name="seekiosAndSeekiosProduction" EntityType="seekios_dbModel.seekiosAndSeekiosProduction" />
+  </EntityContainer>
+  <ComplexType Name="GetAlertAndAlertSOSByUser_Result">
+    <Property Type="Int32" Name="idalert" Nullable="false" />
+    <Property Type="String" Name="content" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="mode_idmode" Nullable="true" />
+    <Property Type="String" Name="title" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="alertDefinition_idalertType" Nullable="false" />
+    <Property Type="DateTime" Name="dateAlertCreation" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="GetAlertRecipientAndAlertRecipientSOSByUser_Result">
+    <Property Type="Int32" Name="idalertRecipient" Nullable="false" />
+    <Property Type="String" Name="nameRecipient" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="alert_idalert" Nullable="false" />
+    <Property Type="String" Name="phoneNumber" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="phoneNumberType" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="emailType" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="dateAlertRecipientCreation" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="GetAllSeekiosByUser_Result">
+    <Property Type="Int32" Name="idseekios" Nullable="false" />
+    <Property Type="String" Name="seekiosName" Nullable="true" MaxLength="250" />
+    <Property Type="Binary" Name="seekiosPicture" Nullable="true" MaxLength="Max" />
+    <Property Type="DateTime" Name="seekios_dateCretaion" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="batteryLife" Nullable="true" />
+    <Property Type="Int32" Name="signalQuality" Nullable="true" />
+    <Property Type="DateTime" Name="dateLastCommunication" Nullable="true" Precision="23" />
+    <Property Type="Double" Name="lastKnownLocation_longitude" Nullable="false" />
+    <Property Type="Double" Name="lastKnownLocation_latitude" Nullable="false" />
+    <Property Type="Double" Name="lastKnownLocation_altitude" Nullable="true" />
+    <Property Type="Double" Name="lastKnownLocation_accuracy" Nullable="true" />
+    <Property Type="DateTime" Name="lastKnownLocation_dateLocationCreation" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="user_iduser" Nullable="false" />
+    <Property Type="Byte" Name="hasGetLastInstruction" Nullable="false" />
+    <Property Type="Byte" Name="isAlertLowBattery" Nullable="false" />
+    <Property Type="Byte" Name="isInPowerSaving" Nullable="false" />
+    <Property Type="Int32" Name="powerSaving_hourStart" Nullable="false" />
+    <Property Type="Int32" Name="powerSaving_hourEnd" Nullable="false" />
+    <Property Type="Int32" Name="alertSOS_idalert" Nullable="true" />
+    <Property Type="Byte" Name="isRefreshingBattery" Nullable="false" />
+    <Property Type="DateTime" Name="dateLastOnDemandRequest" Nullable="true" Precision="23" />
+    <Property Type="Byte" Name="isLastSOSRead" Nullable="true" />
+    <Property Type="Int32" Name="lastKnowLocation_idlocationDefinition" Nullable="false" />
+    <Property Type="DateTime" Name="dateLastSOSSent" Nullable="true" Precision="23" />
+  </ComplexType>
+  <EntityType Name="alert">
+    <Key>
+      <PropertyRef Name="idalert" />
+    </Key>
+    <Property Name="idalert" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="content" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="mode_idmode" Type="Int32" />
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="alertDefinition_idalertType" Type="Int32" Nullable="false" />
+    <Property Name="dateAlertCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="alertDefinition" Relationship="seekios_dbModel.fk_alert_alertDefinition1" FromRole="alert" ToRole="alertDefinition" />
+    <NavigationProperty Name="mode" Relationship="seekios_dbModel.fk_alert_mode1" FromRole="alert" ToRole="mode" />
+    <NavigationProperty Name="alertRecipient" Relationship="seekios_dbModel.fk_alertRecipient_alert1" FromRole="alert" ToRole="alertRecipient" />
+    <NavigationProperty Name="seekios" Relationship="seekios_dbModel.fk_seekios_alert_idalert" FromRole="alert" ToRole="seekios" />
+  </EntityType>
+  <EntityType Name="alertDefinition">
+    <Key>
+      <PropertyRef Name="idalertType" />
+    </Key>
+    <Property Name="idalertType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="alert" Relationship="seekios_dbModel.fk_alert_alertDefinition1" FromRole="alertDefinition" ToRole="alert" />
+  </EntityType>
+  <EntityType Name="alertRecipient">
+    <Key>
+      <PropertyRef Name="idalertRecipient" />
+    </Key>
+    <Property Name="idalertRecipient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nameRecipient" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="alert_idalert" Type="Int32" Nullable="false" />
+    <Property Name="phoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="phoneNumberType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="emailType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="dateAlertRecipientCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="alert" Relationship="seekios_dbModel.fk_alertRecipient_alert1" FromRole="alertRecipient" ToRole="alert" />
+  </EntityType>
+  <EntityType Name="connection">
+    <Key>
+      <PropertyRef Name="idconnection" />
+    </Key>
+    <Property Name="idconnection" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_iduser" Type="Int32" />
+    <Property Name="device_iddevice" Type="Int32" />
+    <Property Name="dateConnection" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ipv4" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ipv6" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="user" Relationship="seekios_dbModel.FK_connection_user_iduser" FromRole="connection" ToRole="user" />
+  </EntityType>
+  <EntityType Name="countryResources">
+    <Key>
+      <PropertyRef Name="idcountryResources" />
+    </Key>
+    <Property Name="idcountryResources" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="countryCode" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="validationEmailContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="validationEmailTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="resetPassordEmailContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="resetPassordEmailTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="resetPassordRequestEmailContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="resetPassordRequestEmailTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="alertSOSEmailContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="alertSOSEmailTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="alertSOSEmailWithMsgContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="alertZoneEmailContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="alertMoveEmailContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="alertZoneEmailTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="alertMoveEmailTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="user" Relationship="seekios_dbModel.fk_user_countryResources" FromRole="countryResources" ToRole="user" />
+  </EntityType>
+  <EntityType Name="device">
+    <Key>
+      <PropertyRef Name="iddevice" />
+    </Key>
+    <Property Name="iddevice" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="deviceName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="os" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="plateform" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="macAdress" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="notificationPlayerId" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="lastUseDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="uidDevice" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="doNotDisturb" Type="Int32" Nullable="false" />
+    <Property Name="countryCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="user_iduser" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="user" Relationship="seekios_dbModel.FK_device_user_iduser" FromRole="device" ToRole="user" />
+  </EntityType>
+  <EntityType Name="friendship">
+    <Key>
+      <PropertyRef Name="user_iduser" />
+      <PropertyRef Name="friend_iduser" />
+    </Key>
+    <Property Name="user_iduser" Type="Int32" Nullable="false" />
+    <Property Name="friend_iduser" Type="Int32" Nullable="false" />
+    <Property Name="isPending" Type="Byte" Nullable="false" />
+    <Property Name="dateFriendshipCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="dateFriendshipAcceptance" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="user" Relationship="seekios_dbModel.fk_friendship_friend" FromRole="friendship" ToRole="user" />
+    <NavigationProperty Name="user1" Relationship="seekios_dbModel.fk_friendship_user" FromRole="friendship" ToRole="user" />
+    <NavigationProperty Name="sharing" Relationship="seekios_dbModel.fk_sharing_friendship" FromRole="friendship" ToRole="sharing" />
+  </EntityType>
+  <EntityType Name="historyAlert">
+    <Key>
+      <PropertyRef Name="idalert" />
+    </Key>
+    <Property Name="idalert" Type="Int32" Nullable="false" />
+    <Property Name="content" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="mode_idmode" Type="Int32" />
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="alertDefinition_idalertType" Type="Int32" Nullable="false" />
+    <Property Name="dateAlertCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="nbrOfRecipient" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="historyMode">
+    <Key>
+      <PropertyRef Name="idmode" />
+    </Key>
+    <Property Name="idmode" Type="Int32" Nullable="false" />
+    <Property Name="dateModeCreation" Type="DateTime" Precision="3" />
+    <Property Name="dateModeDeletion" Type="DateTime" Precision="3" />
+    <Property Name="trame" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="countOfTriggeredAlert" Type="Int32" />
+    <Property Name="lastTriggeredAlertDate" Type="DateTime" Precision="3" />
+    <Property Name="seekios_idseekios" Type="Int32" Nullable="false" />
+    <Property Name="modeDefinition_idmodeDefinition" Type="Int32" Nullable="false" />
+    <Property Name="statusDefinition_idstatusDefinition" Type="Int32" Nullable="false" />
+    <Property Name="device_iddevice" Type="Int32" Nullable="false" />
+    <Property Name="dateModeActivation" Type="DateTime" Precision="3" />
+    <Property Name="timeRefreshTracking" Type="Int32" Nullable="false" />
+    <Property Name="timeDiffHours" Type="Int32" Nullable="false" />
+    <Property Name="timeActivation" Type="Int32" Nullable="false" />
+    <Property Name="timeDesactivation" Type="Int32" Nullable="false" />
+    <Property Name="maxLocation" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="location">
+    <Key>
+      <PropertyRef Name="idlocation" />
+    </Key>
+    <Property Name="idlocation" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="longitude" Type="Double" />
+    <Property Name="latitude" Type="Double" />
+    <Property Name="altitude" Type="Double" />
+    <Property Name="accuracy" Type="Double" />
+    <Property Name="dateLocationCreation" Type="DateTime" Precision="3" />
+    <Property Name="mode_idmode" Type="Int32" />
+    <Property Name="seekios_idseekios" Type="Int32" Nullable="false" />
+    <Property Name="locationDefinition_idlocationDefinition" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="locationDefinition" Relationship="seekios_dbModel.FK__location__locati__60E75331" FromRole="location" ToRole="locationDefinition" />
+    <NavigationProperty Name="seekiosProduction" Relationship="seekios_dbModel.FK_location_seekios_idseekios" FromRole="location" ToRole="seekiosProduction" />
+  </EntityType>
+  <EntityType Name="locationDefinition">
+    <Key>
+      <PropertyRef Name="idlocationDefinition" />
+    </Key>
+    <Property Name="idlocationDefinition" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="location" Relationship="seekios_dbModel.FK__location__locati__60E75331" FromRole="locationDefinition" ToRole="location" />
+    <NavigationProperty Name="seekios" Relationship="seekios_dbModel.FK__seekios__lastKno__61DB776A" FromRole="locationDefinition" ToRole="seekios" />
+    <NavigationProperty Name="historyLocation" Relationship="seekios_dbModel.FK__historyLo__locat__5090EFD7" FromRole="locationDefinition" ToRole="historyLocation" />
+  </EntityType>
+  <EntityType Name="logExceptionSeekios">
+    <Key>
+      <PropertyRef Name="idlogException" />
+    </Key>
+    <Property Name="idlogException" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="exceptionDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="exceptionMessage" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="innerException" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="defaultCustomError" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="data" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="method" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="headers" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="logExceptionSES">
+    <Key>
+      <PropertyRef Name="idlogException" />
+    </Key>
+    <Property Name="idlogException" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="exceptionDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="exceptionMessage" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="innerException" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="data" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="method" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="headers" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="defaultCustomError" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="logVodafoneAndOnesignal">
+    <Key>
+      <PropertyRef Name="idLogVodafoneAndOnesignal" />
+    </Key>
+    <Property Name="idLogVodafoneAndOnesignal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="minorCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="majorCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="outcome" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="msgRef" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="imsi" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="apiUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="dateBegin" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="dateEnd" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="mode">
+    <Key>
+      <PropertyRef Name="idmode" />
+    </Key>
+    <Property Name="idmode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dateModeCreation" Type="DateTime" Precision="3" />
+    <Property Name="trame" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="countOfTriggeredAlert" Type="Int32" />
+    <Property Name="lastTriggeredAlertDate" Type="DateTime" Precision="3" />
+    <Property Name="seekios_idseekios" Type="Int32" Nullable="false" />
+    <Property Name="modeDefinition_idmodeDefinition" Type="Int32" Nullable="false" />
+    <Property Name="statusDefinition_idstatusDefinition" Type="Int32" Nullable="false" />
+    <Property Name="device_iddevice" Type="Int32" Nullable="false" />
+    <Property Name="isPowerSavingEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="dateModeActivation" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="alert" Relationship="seekios_dbModel.fk_alert_mode1" FromRole="mode" ToRole="alert" />
+    <NavigationProperty Name="statusDefinition" Relationship="seekios_dbModel.fk_mode_device_statusDefinition_idstatusDefinition" FromRole="mode" ToRole="statusDefinition" />
+    <NavigationProperty Name="modeDefinition" Relationship="seekios_dbModel.fk_mode_modeDefinition_idmodeDefinition" FromRole="mode" ToRole="modeDefinition" />
+    <NavigationProperty Name="seekios" Relationship="seekios_dbModel.fk_mode_seekios_idseekios" FromRole="mode" ToRole="seekios" />
+    <Property Name="timeRefreshTracking" Type="Int32" Nullable="false" />
+    <Property Name="timeDiffHours" Type="Int32" Nullable="false" />
+    <Property Name="timeActivation" Type="Int32" Nullable="false" />
+    <Property Name="timeDesactivation" Type="Int32" Nullable="false" />
+    <Property Name="maxLocation" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="modeDefinition">
+    <Key>
+      <PropertyRef Name="idmodeDefinition" />
+    </Key>
+    <Property Name="idmodeDefinition" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="mode" Relationship="seekios_dbModel.fk_mode_modeDefinition_idmodeDefinition" FromRole="modeDefinition" ToRole="mode" />
+  </EntityType>
+  <EntityType Name="operation">
+    <Key>
+      <PropertyRef Name="idoperation" />
+    </Key>
+    <Property Name="idoperation" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dateBeginOperation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="dateEndOperation" Type="DateTime" Precision="3" />
+    <Property Name="user_iduser" Type="Int32" Nullable="false" />
+    <Property Name="seekios_idseekios" Type="Int32" />
+    <Property Name="mode_idmode" Type="Int32" />
+    <Property Name="operationType_idoperationType" Type="Int32" Nullable="false" />
+    <Property Name="amount" Type="Int32" Nullable="false" />
+    <Property Name="isOnSeekios" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="operationType" Relationship="seekios_dbModel.fk_operation_operationType" FromRole="operation" ToRole="operationType" />
+    <NavigationProperty Name="user" Relationship="seekios_dbModel.fk_user_user_iduser" FromRole="operation" ToRole="user" />
+  </EntityType>
+  <EntityType Name="operationFromStore">
+    <Key>
+      <PropertyRef Name="idoperationFromStore" />
+    </Key>
+    <Property Name="idoperationFromStore" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idPack" Type="Int32" Nullable="false" />
+    <Property Name="idUser" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="dateTransaction" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="refStore" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="versionApp" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="creditsPurchased" Type="Int32" Nullable="false" />
+    <Property Name="isPackPremium" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="operationType">
+    <Key>
+      <PropertyRef Name="idoperationType" />
+    </Key>
+    <Property Name="idoperationType" Type="Int32" Nullable="false" />
+    <Property Name="operationName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="amount" Type="Int32" Nullable="false" />
+    <Property Name="operator" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="operation" Relationship="seekios_dbModel.fk_operation_operationType" FromRole="operationType" ToRole="operation" />
+  </EntityType>
+  <EntityType Name="packCredit">
+    <Key>
+      <PropertyRef Name="idcreditPack" />
+    </Key>
+    <Property Name="idcreditPack" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="price" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="rewarding" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="isPromotion" Type="Int32" Nullable="false" />
+    <Property Name="promotion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="colorBacground" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="colorHeaderBackground" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="language" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="idProduct" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="operation_idOperationType" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="seekios">
+    <Key>
+      <PropertyRef Name="idseekios" />
+    </Key>
+    <Property Name="idseekios" Type="Int32" Nullable="false" />
+    <Property Name="seekiosName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="seekiosPicture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="seekios_dateCretaion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="batteryLife" Type="Int32" />
+    <Property Name="signalQuality" Type="Int32" />
+    <Property Name="dateLastCommunication" Type="DateTime" Precision="3" />
+    <Property Name="lastKnownLocation_longitude" Type="Double" Nullable="false" />
+    <Property Name="lastKnownLocation_latitude" Type="Double" Nullable="false" />
+    <Property Name="lastKnownLocation_altitude" Type="Double" />
+    <Property Name="lastKnownLocation_accuracy" Type="Double" />
+    <Property Name="lastKnownLocation_dateLocationCreation" Type="DateTime" Precision="3" />
+    <Property Name="user_iduser" Type="Int32" Nullable="false" />
+    <Property Name="hasGetLastInstruction" Type="Byte" Nullable="false" />
+    <Property Name="isAlertLowBattery" Type="Byte" Nullable="false" />
+    <Property Name="isInPowerSaving" Type="Byte" Nullable="false" />
+    <Property Name="powerSaving_hourStart" Type="Int32" Nullable="false" />
+    <Property Name="powerSaving_hourEnd" Type="Int32" Nullable="false" />
+    <Property Name="alertSOS_idalert" Type="Int32" />
+    <Property Name="isRefreshingBattery" Type="Byte" Nullable="false" />
+    <Property Name="dateLastOnDemandRequest" Type="DateTime" Precision="3" />
+    <Property Name="isLastSOSRead" Type="Byte" />
+    <Property Name="lastKnowLocation_idlocationDefinition" Type="Int32" Nullable="false" />
+    <Property Name="dateLastSOSSent" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="alert" Relationship="seekios_dbModel.fk_seekios_alert_idalert" FromRole="seekios" ToRole="alert" />
+    <NavigationProperty Name="locationDefinition" Relationship="seekios_dbModel.FK__seekios__lastKno__61DB776A" FromRole="seekios" ToRole="locationDefinition" />
+    <NavigationProperty Name="mode" Relationship="seekios_dbModel.fk_mode_seekios_idseekios" FromRole="seekios" ToRole="mode" />
+    <NavigationProperty Name="seekiosProduction" Relationship="seekios_dbModel.fk_seekios_seekiosProduction1" FromRole="seekios" ToRole="seekiosProduction" />
+    <NavigationProperty Name="user" Relationship="seekios_dbModel.fk_seekios_user1" FromRole="seekios" ToRole="user" />
+    <NavigationProperty Name="sharing" Relationship="seekios_dbModel.fk_sharing_seekios" FromRole="seekios" ToRole="sharing" />
+    <Property Name="sendNotificationOnNewTrackingLocation" Type="Byte" Nullable="false" />
+    <Property Name="sendNotificationOnNewOutOfZoneLocation" Type="Byte" Nullable="false" />
+    <Property Name="sendNotificationOnNewDontMoveLocation" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="seekiosCommunication">
+    <Key>
+      <PropertyRef Name="idseekiosCommunication" />
+    </Key>
+    <Property Name="idseekiosCommunication" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="seekiosBatteryLife" Type="Int32" Nullable="false" />
+    <Property Name="seekiosSignalQuality" Type="Int32" Nullable="false" />
+    <Property Name="sendDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="receptionDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="seekios_idseekios" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="seekiosHardwareReport">
+    <Key>
+      <PropertyRef Name="SeekiosHardwareReportID" />
+    </Key>
+    <Property Name="SeekiosProdID" Type="Int32" />
+    <Property Name="GSMUSART" Type="Boolean" />
+    <Property Name="GSM_GPRS" Type="Boolean" />
+    <Property Name="GPSUSART" Type="Boolean" />
+    <Property Name="GSPFrames" Type="Boolean" />
+    <Property Name="GPSPosit" Type="Boolean" />
+    <Property Name="IMUgetaccel" Type="Boolean" />
+    <Property Name="BLEConfig" Type="Boolean" />
+    <Property Name="IMUInterrupt" Type="Boolean" />
+    <Property Name="BLEAdvertizing" Type="Boolean" />
+    <Property Name="BLEConnection" Type="Boolean" />
+    <Property Name="DataFlashRead" Type="Boolean" />
+    <Property Name="DataFlashWrite" Type="Boolean" />
+    <Property Name="LEDs" Type="Boolean" />
+    <Property Name="Bouton" Type="Boolean" />
+    <Property Name="CalendarTime" Type="Boolean" />
+    <Property Name="CalendarInterrupt" Type="Boolean" />
+    <Property Name="DateDuTest" Type="Int32" />
+    <Property Name="SeekiosHardwareReportID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CalendarTimestamp" Type="Int32" />
+    <Property Name="BatteryLife" Type="Int32" />
+    <Property Name="AdcUSB" Type="Boolean" />
+    <Property Name="AdcBattery" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="seekiosInstruction">
+    <Key>
+      <PropertyRef Name="idseekiosInstruction" />
+    </Key>
+    <Property Name="idseekiosInstruction" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="instruction" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="dateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="seekiosProduction_idseekiosProduction" Type="Int32" Nullable="false" />
+    <Property Name="instructionType" Type="Int32" />
+    <NavigationProperty Name="seekiosProduction" Relationship="seekios_dbModel.fk_seekiosInstruction_seekiosProduction" FromRole="seekiosInstruction" ToRole="seekiosProduction" />
+  </EntityType>
+  <EntityType Name="seekiosProduction">
+    <Key>
+      <PropertyRef Name="idseekiosProduction" />
+    </Key>
+    <Property Name="idseekiosProduction" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="imei" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="uidSeekios" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="macAddress" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="imsi" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="lastUpdateConfirmed" Type="Byte" />
+    <Property Name="versionEmbedded_idversionEmbedded" Type="Int32" Nullable="false" />
+    <Property Name="dateFirstRegistration" Type="DateTime" Precision="3" />
+    <Property Name="freeCredit" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="location" Relationship="seekios_dbModel.FK_location_seekios_idseekios" FromRole="seekiosProduction" ToRole="location" />
+    <NavigationProperty Name="seekios" Relationship="seekios_dbModel.fk_seekios_seekiosProduction1" FromRole="seekiosProduction" ToRole="seekios" />
+    <NavigationProperty Name="seekiosInstruction" Relationship="seekios_dbModel.fk_seekiosInstruction_seekiosProduction" FromRole="seekiosProduction" ToRole="seekiosInstruction" />
+    <NavigationProperty Name="versionEmbedded" Relationship="seekios_dbModel.fk_seekiosProduction_versionEmbedded" FromRole="seekiosProduction" ToRole="versionEmbedded" />
+    <NavigationProperty Name="historyLocation" Relationship="seekios_dbModel.FK_historyLocation_seekios_idseekios" FromRole="seekiosProduction" ToRole="historyLocation" />
+  </EntityType>
+  <EntityType Name="sharing">
+    <Key>
+      <PropertyRef Name="user_iduser" />
+      <PropertyRef Name="friend_iduser" />
+      <PropertyRef Name="seekios_idseekios" />
+    </Key>
+    <Property Name="user_iduser" Type="Int32" Nullable="false" />
+    <Property Name="friend_iduser" Type="Int32" Nullable="false" />
+    <Property Name="seekios_idseekios" Type="Int32" Nullable="false" />
+    <Property Name="dateBeginSharing" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="dateEndSharing" Type="DateTime" Precision="3" />
+    <Property Name="isUserOwner" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="friendship" Relationship="seekios_dbModel.fk_sharing_friendship" FromRole="sharing" ToRole="friendship" />
+    <NavigationProperty Name="seekios" Relationship="seekios_dbModel.fk_sharing_seekios" FromRole="sharing" ToRole="seekios" />
+  </EntityType>
+  <EntityType Name="statusDefinition">
+    <Key>
+      <PropertyRef Name="idstatusDefinition" />
+    </Key>
+    <Property Name="idstatusDefinition" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="mode" Relationship="seekios_dbModel.fk_mode_device_statusDefinition_idstatusDefinition" FromRole="statusDefinition" ToRole="mode" />
+  </EntityType>
+  <EntityType Name="token">
+    <Key>
+      <PropertyRef Name="idToken" />
+      <PropertyRef Name="authToken" />
+    </Key>
+    <Property Name="idToken" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_iduser" Type="Int32" Nullable="false" />
+    <Property Name="authToken" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="dateCreationToken" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="dateExpiresToken" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="user" Relationship="seekios_dbModel.fk_token_user_iduser" FromRole="token" ToRole="user" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="iduser" />
+    </Key>
+    <Property Name="iduser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="lastName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="firstName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="remainingRequest" Type="Int32" />
+    <Property Name="userPicture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="isValidate" Type="Boolean" />
+    <Property Name="defaultTheme" Type="Int32" />
+    <Property Name="dateLastConnection" Type="DateTime" Precision="3" />
+    <Property Name="phoneNumber" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="socialNetworkUserId" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="socialNetworkType" Type="Int32" />
+    <Property Name="dateCreation" Type="DateTime" Precision="3" />
+    <Property Name="validationToken" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="resetPasswordToken" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="countryResources_idcountryResources" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="connection" Relationship="seekios_dbModel.FK_connection_user_iduser" FromRole="user" ToRole="connection" />
+    <NavigationProperty Name="countryResources" Relationship="seekios_dbModel.fk_user_countryResources" FromRole="user" ToRole="countryResources" />
+    <NavigationProperty Name="device" Relationship="seekios_dbModel.FK_device_user_iduser" FromRole="user" ToRole="device" />
+    <NavigationProperty Name="friendship" Relationship="seekios_dbModel.fk_friendship_friend" FromRole="user" ToRole="friendship" />
+    <NavigationProperty Name="friendship1" Relationship="seekios_dbModel.fk_friendship_user" FromRole="user" ToRole="friendship" />
+    <NavigationProperty Name="operation" Relationship="seekios_dbModel.fk_user_user_iduser" FromRole="user" ToRole="operation" />
+    <NavigationProperty Name="seekios" Relationship="seekios_dbModel.fk_seekios_user1" FromRole="user" ToRole="seekios" />
+    <NavigationProperty Name="token" Relationship="seekios_dbModel.fk_token_user_iduser" FromRole="user" ToRole="token" />
+  </EntityType>
+  <EntityType Name="versionApplication">
+    <Key>
+      <PropertyRef Name="idversionApplication" />
+    </Key>
+    <Property Name="idversionApplication" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="versionNumber" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="isNeedUpdate" Type="Byte" Nullable="false" />
+    <Property Name="plateforme" Type="Int32" Nullable="false" />
+    <Property Name="version_dateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="pubKey_googleLicence" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="versionEmbedded">
+    <Key>
+      <PropertyRef Name="idVersionEmbedded" />
+    </Key>
+    <Property Name="idVersionEmbedded" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="versionName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dateVersionCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="releaseNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SHA1Hash" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="seekiosProduction" Relationship="seekios_dbModel.fk_seekiosProduction_versionEmbedded" FromRole="versionEmbedded" ToRole="seekiosProduction" />
+    <Property Name="isBetaVersion" Type="Boolean" Nullable="false" />
+    <Property Name="releaseNotesEnglish" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="historySeekios">
+    <Key>
+      <PropertyRef Name="idseekios" />
+      <PropertyRef Name="seekios_dateCretaion" />
+      <PropertyRef Name="lastKnownLocation_longitude" />
+      <PropertyRef Name="lastKnownLocation_latitude" />
+      <PropertyRef Name="user_iduser" />
+      <PropertyRef Name="hasGetLastInstruction" />
+      <PropertyRef Name="isAlertLowBattery" />
+      <PropertyRef Name="isInPowerSaving" />
+      <PropertyRef Name="powerSaving_hourStart" />
+      <PropertyRef Name="powerSaving_hourEnd" />
+      <PropertyRef Name="isRefreshingBattery" />
+      <PropertyRef Name="sendNotificationOnNewTrackingLocation" />
+      <PropertyRef Name="sendNotificationOnNewOutOfZoneLocation" />
+      <PropertyRef Name="sendNotificationOnNewDontMoveLocation" />
+    </Key>
+    <Property Name="idseekios" Type="Int32" Nullable="false" />
+    <Property Name="seekiosName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="seekiosPicture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="seekios_dateCretaion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="batteryLife" Type="Int32" />
+    <Property Name="signalQuality" Type="Int32" />
+    <Property Name="dateLastCommunication" Type="DateTime" Precision="3" />
+    <Property Name="lastKnownLocation_longitude" Type="Double" Nullable="false" />
+    <Property Name="lastKnownLocation_latitude" Type="Double" Nullable="false" />
+    <Property Name="lastKnownLocation_altitude" Type="Double" />
+    <Property Name="lastKnownLocation_accuracy" Type="Double" />
+    <Property Name="lastKnownLocation_dateLocationCreation" Type="DateTime" Precision="3" />
+    <Property Name="user_iduser" Type="Int32" Nullable="false" />
+    <Property Name="hasGetLastInstruction" Type="Byte" Nullable="false" />
+    <Property Name="isAlertLowBattery" Type="Byte" Nullable="false" />
+    <Property Name="isInPowerSaving" Type="Byte" Nullable="false" />
+    <Property Name="powerSaving_hourStart" Type="Int32" Nullable="false" />
+    <Property Name="powerSaving_hourEnd" Type="Int32" Nullable="false" />
+    <Property Name="alertSOS_idalert" Type="Int32" />
+    <Property Name="isRefreshingBattery" Type="Byte" Nullable="false" />
+    <Property Name="dateLastOnDemandRequest" Type="DateTime" Precision="3" />
+    <Property Name="isLastSOSRead" Type="Byte" />
+    <Property Name="lastKnowLocation_idlocationDefinition" Type="Int32" />
+    <Property Name="dateLastSOSSent" Type="DateTime" Precision="3" />
+    <Property Name="sendNotificationOnNewTrackingLocation" Type="Byte" Nullable="false" />
+    <Property Name="sendNotificationOnNewOutOfZoneLocation" Type="Byte" Nullable="false" />
+    <Property Name="sendNotificationOnNewDontMoveLocation" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="alertAndAlertRecipient">
+    <Key>
+      <PropertyRef Name="idalert" />
+      <PropertyRef Name="alertDefinition_idalertType" />
+      <PropertyRef Name="dateAlertCreation" />
+      <PropertyRef Name="idalertRecipient" />
+      <PropertyRef Name="alert_idalert" />
+      <PropertyRef Name="dateAlertRecipientCreation" />
+    </Key>
+    <Property Name="idalert" Type="Int32" Nullable="false" />
+    <Property Name="content" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="mode_idmode" Type="Int32" />
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="alertDefinition_idalertType" Type="Int32" Nullable="false" />
+    <Property Name="dateAlertCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="idalertRecipient" Type="Int32" Nullable="false" />
+    <Property Name="nameRecipient" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="alert_idalert" Type="Int32" Nullable="false" />
+    <Property Name="phoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="phoneNumberType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="emailType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="dateAlertRecipientCreation" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="packCreditAndOperationType">
+    <Key>
+      <PropertyRef Name="idcreditPack" />
+      <PropertyRef Name="rewarding" />
+      <PropertyRef Name="title" />
+      <PropertyRef Name="description" />
+      <PropertyRef Name="isPromotion" />
+      <PropertyRef Name="colorBacground" />
+      <PropertyRef Name="colorHeaderBackground" />
+      <PropertyRef Name="language" />
+      <PropertyRef Name="idProduct" />
+      <PropertyRef Name="operation_idOperationType" />
+      <PropertyRef Name="idoperationType" />
+      <PropertyRef Name="operationName" />
+      <PropertyRef Name="amount" />
+    </Key>
+    <Property Name="idcreditPack" Type="Int32" Nullable="false" />
+    <Property Name="price" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="rewarding" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="isPromotion" Type="Int32" Nullable="false" />
+    <Property Name="promotion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="colorBacground" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="colorHeaderBackground" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="language" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="idProduct" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="operation_idOperationType" Type="Int32" Nullable="false" />
+    <Property Name="idoperationType" Type="Int32" Nullable="false" />
+    <Property Name="operationName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="amount" Type="Int32" Nullable="false" />
+    <Property Name="operator" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <Association Name="fk_alert_alertDefinition1">
+    <End Type="seekios_dbModel.alertDefinition" Role="alertDefinition" Multiplicity="1" />
+    <End Type="seekios_dbModel.alert" Role="alert" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="alertDefinition">
+        <PropertyRef Name="idalertType" />
+      </Principal>
+      <Dependent Role="alert">
+        <PropertyRef Name="alertDefinition_idalertType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_alert_mode1">
+    <End Type="seekios_dbModel.mode" Role="mode" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="seekios_dbModel.alert" Role="alert" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mode">
+        <PropertyRef Name="idmode" />
+      </Principal>
+      <Dependent Role="alert">
+        <PropertyRef Name="mode_idmode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_alertRecipient_alert1">
+    <End Type="seekios_dbModel.alert" Role="alert" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="seekios_dbModel.alertRecipient" Role="alertRecipient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="alert">
+        <PropertyRef Name="idalert" />
+      </Principal>
+      <Dependent Role="alertRecipient">
+        <PropertyRef Name="alert_idalert" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_seekios_alert_idalert">
+    <End Type="seekios_dbModel.alert" Role="alert" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="seekios_dbModel.seekios" Role="seekios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="alert">
+        <PropertyRef Name="idalert" />
+      </Principal>
+      <Dependent Role="seekios">
+        <PropertyRef Name="alertSOS_idalert" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_connection_user_iduser">
+    <End Type="seekios_dbModel.user" Role="user" Multiplicity="0..1" />
+    <End Type="seekios_dbModel.connection" Role="connection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="iduser" />
+      </Principal>
+      <Dependent Role="connection">
+        <PropertyRef Name="user_iduser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_user_countryResources">
+    <End Type="seekios_dbModel.countryResources" Role="countryResources" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="seekios_dbModel.user" Role="user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="countryResources">
+        <PropertyRef Name="idcountryResources" />
+      </Principal>
+      <Dependent Role="user">
+        <PropertyRef Name="countryResources_idcountryResources" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_device_user_iduser">
+    <End Type="seekios_dbModel.user" Role="user" Multiplicity="1" />
+    <End Type="seekios_dbModel.device" Role="device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="iduser" />
+      </Principal>
+      <Dependent Role="device">
+        <PropertyRef Name="user_iduser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_friendship_friend">
+    <End Type="seekios_dbModel.user" Role="user" Multiplicity="1" />
+    <End Type="seekios_dbModel.friendship" Role="friendship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="iduser" />
+      </Principal>
+      <Dependent Role="friendship">
+        <PropertyRef Name="friend_iduser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_friendship_user">
+    <End Type="seekios_dbModel.user" Role="user" Multiplicity="1" />
+    <End Type="seekios_dbModel.friendship" Role="friendship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="iduser" />
+      </Principal>
+      <Dependent Role="friendship">
+        <PropertyRef Name="user_iduser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sharing_friendship">
+    <End Type="seekios_dbModel.friendship" Role="friendship" Multiplicity="1" />
+    <End Type="seekios_dbModel.sharing" Role="sharing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="friendship">
+        <PropertyRef Name="user_iduser" />
+        <PropertyRef Name="friend_iduser" />
+      </Principal>
+      <Dependent Role="sharing">
+        <PropertyRef Name="user_iduser" />
+        <PropertyRef Name="friend_iduser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__location__locati__60E75331">
+    <End Type="seekios_dbModel.locationDefinition" Role="locationDefinition" Multiplicity="1" />
+    <End Type="seekios_dbModel.location" Role="location" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="locationDefinition">
+        <PropertyRef Name="idlocationDefinition" />
+      </Principal>
+      <Dependent Role="location">
+        <PropertyRef Name="locationDefinition_idlocationDefinition" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_location_seekios_idseekios">
+    <End Type="seekios_dbModel.seekiosProduction" Role="seekiosProduction" Multiplicity="1" />
+    <End Type="seekios_dbModel.location" Role="location" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="seekiosProduction">
+        <PropertyRef Name="idseekiosProduction" />
+      </Principal>
+      <Dependent Role="location">
+        <PropertyRef Name="seekios_idseekios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__seekios__lastKno__61DB776A">
+    <End Type="seekios_dbModel.locationDefinition" Role="locationDefinition" Multiplicity="1" />
+    <End Type="seekios_dbModel.seekios" Role="seekios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="locationDefinition">
+        <PropertyRef Name="idlocationDefinition" />
+      </Principal>
+      <Dependent Role="seekios">
+        <PropertyRef Name="lastKnowLocation_idlocationDefinition" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_mode_device_statusDefinition_idstatusDefinition">
+    <End Type="seekios_dbModel.statusDefinition" Role="statusDefinition" Multiplicity="1" />
+    <End Type="seekios_dbModel.mode" Role="mode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="statusDefinition">
+        <PropertyRef Name="idstatusDefinition" />
+      </Principal>
+      <Dependent Role="mode">
+        <PropertyRef Name="statusDefinition_idstatusDefinition" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_mode_modeDefinition_idmodeDefinition">
+    <End Type="seekios_dbModel.modeDefinition" Role="modeDefinition" Multiplicity="1" />
+    <End Type="seekios_dbModel.mode" Role="mode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="modeDefinition">
+        <PropertyRef Name="idmodeDefinition" />
+      </Principal>
+      <Dependent Role="mode">
+        <PropertyRef Name="modeDefinition_idmodeDefinition" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_mode_seekios_idseekios">
+    <End Type="seekios_dbModel.seekios" Role="seekios" Multiplicity="1" />
+    <End Type="seekios_dbModel.mode" Role="mode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="seekios">
+        <PropertyRef Name="idseekios" />
+      </Principal>
+      <Dependent Role="mode">
+        <PropertyRef Name="seekios_idseekios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_operation_operationType">
+    <End Type="seekios_dbModel.operationType" Role="operationType" Multiplicity="1" />
+    <End Type="seekios_dbModel.operation" Role="operation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="operationType">
+        <PropertyRef Name="idoperationType" />
+      </Principal>
+      <Dependent Role="operation">
+        <PropertyRef Name="operationType_idoperationType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_user_user_iduser">
+    <End Type="seekios_dbModel.user" Role="user" Multiplicity="1" />
+    <End Type="seekios_dbModel.operation" Role="operation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="iduser" />
+      </Principal>
+      <Dependent Role="operation">
+        <PropertyRef Name="user_iduser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_seekios_seekiosProduction1">
+    <End Type="seekios_dbModel.seekiosProduction" Role="seekiosProduction" Multiplicity="1" />
+    <End Type="seekios_dbModel.seekios" Role="seekios" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="seekiosProduction">
+        <PropertyRef Name="idseekiosProduction" />
+      </Principal>
+      <Dependent Role="seekios">
+        <PropertyRef Name="idseekios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_seekios_user1">
+    <End Type="seekios_dbModel.user" Role="user" Multiplicity="1" />
+    <End Type="seekios_dbModel.seekios" Role="seekios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="iduser" />
+      </Principal>
+      <Dependent Role="seekios">
+        <PropertyRef Name="user_iduser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sharing_seekios">
+    <End Type="seekios_dbModel.seekios" Role="seekios" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="seekios_dbModel.sharing" Role="sharing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="seekios">
+        <PropertyRef Name="idseekios" />
+      </Principal>
+      <Dependent Role="sharing">
+        <PropertyRef Name="seekios_idseekios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_seekiosInstruction_seekiosProduction">
+    <End Type="seekios_dbModel.seekiosProduction" Role="seekiosProduction" Multiplicity="1" />
+    <End Type="seekios_dbModel.seekiosInstruction" Role="seekiosInstruction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="seekiosProduction">
+        <PropertyRef Name="idseekiosProduction" />
+      </Principal>
+      <Dependent Role="seekiosInstruction">
+        <PropertyRef Name="seekiosProduction_idseekiosProduction" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_seekiosProduction_versionEmbedded">
+    <End Type="seekios_dbModel.versionEmbedded" Role="versionEmbedded" Multiplicity="1" />
+    <End Type="seekios_dbModel.seekiosProduction" Role="seekiosProduction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="versionEmbedded">
+        <PropertyRef Name="idVersionEmbedded" />
+      </Principal>
+      <Dependent Role="seekiosProduction">
+        <PropertyRef Name="versionEmbedded_idversionEmbedded" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_token_user_iduser">
+    <End Type="seekios_dbModel.user" Role="user" Multiplicity="1" />
+    <End Type="seekios_dbModel.token" Role="token" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="iduser" />
+      </Principal>
+      <Dependent Role="token">
+        <PropertyRef Name="user_iduser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="historyLocation">
+    <Key>
+      <PropertyRef Name="idlocation" />
+    </Key>
+    <Property Name="idlocation" Type="Int32" Nullable="false" />
+    <Property Name="longitude" Type="Double" />
+    <Property Name="latitude" Type="Double" />
+    <Property Name="altitude" Type="Double" />
+    <Property Name="accuracy" Type="Double" />
+    <Property Name="dateLocationCreation" Type="DateTime" Precision="3" />
+    <Property Name="mode_idmode" Type="Int32" />
+    <Property Name="seekios_idseekios" Type="Int32" Nullable="false" />
+    <Property Name="locationDefinition_idlocationDefinition" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="locationDefinition" Relationship="seekios_dbModel.FK__historyLo__locat__5090EFD7" FromRole="historyLocation" ToRole="locationDefinition" />
+    <NavigationProperty Name="seekiosProduction" Relationship="seekios_dbModel.FK_historyLocation_seekios_idseekios" FromRole="historyLocation" ToRole="seekiosProduction" />
+  </EntityType>
+  <Association Name="FK__historyLo__locat__5090EFD7">
+    <End Type="seekios_dbModel.locationDefinition" Role="locationDefinition" Multiplicity="1" />
+    <End Type="seekios_dbModel.historyLocation" Role="historyLocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="locationDefinition">
+        <PropertyRef Name="idlocationDefinition" />
+      </Principal>
+      <Dependent Role="historyLocation">
+        <PropertyRef Name="locationDefinition_idlocationDefinition" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_historyLocation_seekios_idseekios">
+    <End Type="seekios_dbModel.seekiosProduction" Role="seekiosProduction" Multiplicity="1" />
+    <End Type="seekios_dbModel.historyLocation" Role="historyLocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="seekiosProduction">
+        <PropertyRef Name="idseekiosProduction" />
+      </Principal>
+      <Dependent Role="historyLocation">
+        <PropertyRef Name="seekios_idseekios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="seekiosAndSeekiosProduction">
+    <Key>
+      <PropertyRef Name="idseekiosProduction" />
+      <PropertyRef Name="versionEmbedded_idversionEmbedded" />
+      <PropertyRef Name="freeCredit" />
+    </Key>
+    <Property Name="idseekios" Type="Int32" />
+    <Property Name="seekiosName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="seekiosPicture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="seekios_dateCretaion" Type="DateTime" Precision="3" />
+    <Property Name="batteryLife" Type="Int32" />
+    <Property Name="signalQuality" Type="Int32" />
+    <Property Name="dateLastCommunication" Type="DateTime" Precision="3" />
+    <Property Name="lastKnownLocation_longitude" Type="Double" />
+    <Property Name="lastKnownLocation_latitude" Type="Double" />
+    <Property Name="lastKnownLocation_altitude" Type="Double" />
+    <Property Name="lastKnownLocation_accuracy" Type="Double" />
+    <Property Name="lastKnownLocation_dateLocationCreation" Type="DateTime" Precision="3" />
+    <Property Name="user_iduser" Type="Int32" />
+    <Property Name="hasGetLastInstruction" Type="Byte" />
+    <Property Name="isAlertLowBattery" Type="Byte" />
+    <Property Name="isInPowerSaving" Type="Byte" />
+    <Property Name="powerSaving_hourStart" Type="Int32" />
+    <Property Name="powerSaving_hourEnd" Type="Int32" />
+    <Property Name="alertSOS_idalert" Type="Int32" />
+    <Property Name="isRefreshingBattery" Type="Byte" />
+    <Property Name="dateLastOnDemandRequest" Type="DateTime" Precision="3" />
+    <Property Name="isLastSOSRead" Type="Byte" />
+    <Property Name="lastKnowLocation_idlocationDefinition" Type="Int32" />
+    <Property Name="dateLastSOSSent" Type="DateTime" Precision="3" />
+    <Property Name="sendNotificationOnNewTrackingLocation" Type="Byte" />
+    <Property Name="sendNotificationOnNewOutOfZoneLocation" Type="Byte" />
+    <Property Name="sendNotificationOnNewDontMoveLocation" Type="Byte" />
+    <Property Name="idseekiosProduction" Type="Int32" Nullable="false" />
+    <Property Name="imei" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="uidSeekios" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="macAddress" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="imsi" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="lastUpdateConfirmed" Type="Byte" />
+    <Property Name="versionEmbedded_idversionEmbedded" Type="Int32" Nullable="false" />
+    <Property Name="dateFirstRegistration" Type="DateTime" Precision="3" />
+    <Property Name="freeCredit" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

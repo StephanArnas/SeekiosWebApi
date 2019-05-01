@@ -1,0 +1,120 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26606.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AzureCloudServiceSeekios", "SeekiosCloudService\AzureCloudServiceSeekios.ccproj", "{F779F62B-05F2-4286-85C4-E33E4CB7D76C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFServiceWebRoleSeekios", "WCFServiceWebRole\WCFServiceWebRoleSeekios.csproj", "{44800D30-28CB-48C5-9A84-C7D4E57ABDCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFServiceWebRoleEmbedded", "WCFEmbeddedServiceWebRole\WCFServiceWebRoleEmbedded.csproj", "{93B59279-AB52-4344-8B80-531A9B7F7148}"
+	ProjectSection(ProjectDependencies) = postProject
+		{44800D30-28CB-48C5-9A84-C7D4E57ABDCC} = {44800D30-28CB-48C5-9A84-C7D4E57ABDCC}
+	EndProjectSection
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AzureCloudServiceEmbedded", "AzureCloudEmbeddedService\AzureCloudServiceEmbedded.ccproj", "{927F0AD9-DFF5-4161-9D37-21C4CA984C15}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{3661BCC8-55E0-40E9-AE65-800F12390C20}"
+	ProjectSection(SolutionItems) = preProject
+		DatabaseBackUp.ps1 = DatabaseBackUp.ps1
+		DatabaseRestore.ps1 = DatabaseRestore.ps1
+		UpdateCreditsJob.ps1 = UpdateCreditsJob.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1AB690EA-AE82-4DE4-B753-76F296F5E755}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceSeekiosUnitTest", "ServiceSeekiosUnitTest\ServiceSeekiosUnitTest.csproj", "{9007BB54-4306-4ECF-9F5C-5B2F402202EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceEmbeddedUnitTest", "ServiceEmbeddedUnitTest\ServiceEmbeddedUnitTest.csproj", "{F070EA5F-FEB9-40CD-A484-8A0DF1807B8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F779F62B-05F2-4286-85C4-E33E4CB7D76C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F779F62B-05F2-4286-85C4-E33E4CB7D76C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F779F62B-05F2-4286-85C4-E33E4CB7D76C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F779F62B-05F2-4286-85C4-E33E4CB7D76C}.Debug|x86.Build.0 = Debug|Any CPU
+		{F779F62B-05F2-4286-85C4-E33E4CB7D76C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F779F62B-05F2-4286-85C4-E33E4CB7D76C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F779F62B-05F2-4286-85C4-E33E4CB7D76C}.Release|x86.ActiveCfg = Release|Any CPU
+		{F779F62B-05F2-4286-85C4-E33E4CB7D76C}.Release|x86.Build.0 = Release|Any CPU
+		{44800D30-28CB-48C5-9A84-C7D4E57ABDCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44800D30-28CB-48C5-9A84-C7D4E57ABDCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44800D30-28CB-48C5-9A84-C7D4E57ABDCC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{44800D30-28CB-48C5-9A84-C7D4E57ABDCC}.Debug|x86.Build.0 = Debug|Any CPU
+		{44800D30-28CB-48C5-9A84-C7D4E57ABDCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44800D30-28CB-48C5-9A84-C7D4E57ABDCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44800D30-28CB-48C5-9A84-C7D4E57ABDCC}.Release|x86.ActiveCfg = Release|Any CPU
+		{44800D30-28CB-48C5-9A84-C7D4E57ABDCC}.Release|x86.Build.0 = Release|Any CPU
+		{93B59279-AB52-4344-8B80-531A9B7F7148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93B59279-AB52-4344-8B80-531A9B7F7148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93B59279-AB52-4344-8B80-531A9B7F7148}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{93B59279-AB52-4344-8B80-531A9B7F7148}.Debug|x86.Build.0 = Debug|Any CPU
+		{93B59279-AB52-4344-8B80-531A9B7F7148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93B59279-AB52-4344-8B80-531A9B7F7148}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93B59279-AB52-4344-8B80-531A9B7F7148}.Release|x86.ActiveCfg = Release|Any CPU
+		{93B59279-AB52-4344-8B80-531A9B7F7148}.Release|x86.Build.0 = Release|Any CPU
+		{927F0AD9-DFF5-4161-9D37-21C4CA984C15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{927F0AD9-DFF5-4161-9D37-21C4CA984C15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{927F0AD9-DFF5-4161-9D37-21C4CA984C15}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{927F0AD9-DFF5-4161-9D37-21C4CA984C15}.Debug|x86.Build.0 = Debug|Any CPU
+		{927F0AD9-DFF5-4161-9D37-21C4CA984C15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{927F0AD9-DFF5-4161-9D37-21C4CA984C15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{927F0AD9-DFF5-4161-9D37-21C4CA984C15}.Release|x86.ActiveCfg = Release|Any CPU
+		{927F0AD9-DFF5-4161-9D37-21C4CA984C15}.Release|x86.Build.0 = Release|Any CPU
+		{9007BB54-4306-4ECF-9F5C-5B2F402202EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9007BB54-4306-4ECF-9F5C-5B2F402202EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9007BB54-4306-4ECF-9F5C-5B2F402202EF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9007BB54-4306-4ECF-9F5C-5B2F402202EF}.Debug|x86.Build.0 = Debug|Any CPU
+		{9007BB54-4306-4ECF-9F5C-5B2F402202EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9007BB54-4306-4ECF-9F5C-5B2F402202EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9007BB54-4306-4ECF-9F5C-5B2F402202EF}.Release|x86.ActiveCfg = Release|Any CPU
+		{9007BB54-4306-4ECF-9F5C-5B2F402202EF}.Release|x86.Build.0 = Release|Any CPU
+		{F070EA5F-FEB9-40CD-A484-8A0DF1807B8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F070EA5F-FEB9-40CD-A484-8A0DF1807B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F070EA5F-FEB9-40CD-A484-8A0DF1807B8E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F070EA5F-FEB9-40CD-A484-8A0DF1807B8E}.Debug|x86.Build.0 = Debug|Any CPU
+		{F070EA5F-FEB9-40CD-A484-8A0DF1807B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F070EA5F-FEB9-40CD-A484-8A0DF1807B8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F070EA5F-FEB9-40CD-A484-8A0DF1807B8E}.Release|x86.ActiveCfg = Release|Any CPU
+		{F070EA5F-FEB9-40CD-A484-8A0DF1807B8E}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9007BB54-4306-4ECF-9F5C-5B2F402202EF} = {1AB690EA-AE82-4DE4-B753-76F296F5E755}
+		{F070EA5F-FEB9-40CD-A484-8A0DF1807B8E} = {1AB690EA-AE82-4DE4-B753-76F296F5E755}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://seekios.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AzureCloudEmbeddedService\\AzureCloudServiceEmbedded.ccproj
+		SccProjectName1 = AzureCloudEmbeddedService
+		SccLocalPath1 = AzureCloudEmbeddedService
+		SccProjectUniqueName2 = SeekiosCloudService\\AzureCloudServiceSeekios.ccproj
+		SccProjectName2 = SeekiosCloudService
+		SccLocalPath2 = SeekiosCloudService
+		SccProjectUniqueName3 = WCFEmbeddedServiceWebRole\\WCFServiceWebRoleEmbedded.csproj
+		SccProjectName3 = WCFEmbeddedServiceWebRole
+		SccLocalPath3 = WCFEmbeddedServiceWebRole
+		SccProjectUniqueName4 = WCFServiceWebRole\\WCFServiceWebRoleSeekios.csproj
+		SccProjectName4 = WCFServiceWebRole
+		SccLocalPath4 = WCFServiceWebRole
+		SccProjectUniqueName5 = ServiceSeekiosUnitTest\\ServiceSeekiosUnitTest.csproj
+		SccProjectTopLevelParentUniqueName5 = SeekiosCloudService.sln
+		SccProjectName5 = ServiceSeekiosUnitTest
+		SccLocalPath5 = ServiceSeekiosUnitTest
+		SccProjectUniqueName6 = ServiceEmbeddedUnitTest\\ServiceEmbeddedUnitTest.csproj
+		SccProjectTopLevelParentUniqueName6 = SeekiosCloudService.sln
+		SccProjectName6 = ServiceEmbeddedUnitTest
+		SccLocalPath6 = ServiceEmbeddedUnitTest
+	EndGlobalSection
+EndGlobal

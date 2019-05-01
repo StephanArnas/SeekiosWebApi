@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bf93137c7a6a4553b47c2a1597722f44" Name="Diagram1" ZoomLevel="80">
+        <EntityTypeShape EntityType="seekios_dbModel.alert" Width="1.5" PointX="12.75" PointY="16.625" />
+        <EntityTypeShape EntityType="seekios_dbModel.alertDefinition" Width="1.5" PointX="10.5" PointY="12.75" />
+        <EntityTypeShape EntityType="seekios_dbModel.alertRecipient" Width="1.5" PointX="15" PointY="16.75" />
+        <EntityTypeShape EntityType="seekios_dbModel.connection" Width="1.5" PointX="5.25" PointY="7.75" />
+        <EntityTypeShape EntityType="seekios_dbModel.countryResources" Width="1.5" PointX="0.75" PointY="11.875" />
+        <EntityTypeShape EntityType="seekios_dbModel.device" Width="1.5" PointX="5.25" PointY="25.625" />
+        <EntityTypeShape EntityType="seekios_dbModel.friendship" Width="1.5" PointX="5.25" PointY="10.875" />
+        <EntityTypeShape EntityType="seekios_dbModel.historyAlert" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="seekios_dbModel.historyMode" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="seekios_dbModel.location" Width="1.5" PointX="10.25" PointY="8.25" />
+        <EntityTypeShape EntityType="seekios_dbModel.locationDefinition" Width="1.5" PointX="6" PointY="18.625" />
+        <EntityTypeShape EntityType="seekios_dbModel.logExceptionSeekios" Width="1.5" PointX="12.75" PointY="6.75" />
+        <EntityTypeShape EntityType="seekios_dbModel.logExceptionSES" Width="1.5" PointX="12.75" PointY="10.75" />
+        <EntityTypeShape EntityType="seekios_dbModel.logVodafoneAndOnesignal" Width="1.5" PointX="14.75" PointY="6.75" />
+        <EntityTypeShape EntityType="seekios_dbModel.mode" Width="1.5" PointX="10.5" PointY="16.125" />
+        <EntityTypeShape EntityType="seekios_dbModel.modeDefinition" Width="1.5" PointX="8.25" PointY="23" />
+        <EntityTypeShape EntityType="seekios_dbModel.operation" Width="1.5" PointX="5.25" PointY="14.5" />
+        <EntityTypeShape EntityType="seekios_dbModel.operationFromStore" Width="1.875" PointX="14.75" PointY="10.75" />
+        <EntityTypeShape EntityType="seekios_dbModel.operationType" Width="1.5" PointX="3" PointY="18.125" />
+        <EntityTypeShape EntityType="seekios_dbModel.packCredit" Width="1.5" PointX="15.75" PointY="0.75" />
+        <EntityTypeShape EntityType="seekios_dbModel.seekios" Width="1.5" PointX="8.25" PointY="14.625" />
+        <EntityTypeShape EntityType="seekios_dbModel.seekiosCommunication" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="seekios_dbModel.seekiosHardwareReport" Width="1.5" PointX="16.75" PointY="5.75" />
+        <EntityTypeShape EntityType="seekios_dbModel.seekiosInstruction" Width="1.5" PointX="8.25" PointY="5" />
+        <EntityTypeShape EntityType="seekios_dbModel.seekiosProduction" Width="1.5" PointX="6" PointY="3.375" />
+        <EntityTypeShape EntityType="seekios_dbModel.sharing" Width="1.5" PointX="7.5" PointY="10.875" />
+        <EntityTypeShape EntityType="seekios_dbModel.statusDefinition" Width="1.5" PointX="8.25" PointY="25.5" />
+        <EntityTypeShape EntityType="seekios_dbModel.token" Width="1.5" PointX="5.25" PointY="29.625" />
+        <EntityTypeShape EntityType="seekios_dbModel.user" Width="1.5" PointX="3" PointY="11.125" />
+        <EntityTypeShape EntityType="seekios_dbModel.versionApplication" Width="1.5" PointX="17.75" PointY="0.75" />
+        <EntityTypeShape EntityType="seekios_dbModel.versionEmbedded" Width="1.5" PointX="3.75" PointY="4" />
+        <EntityTypeShape EntityType="seekios_dbModel.historySeekios" Width="1.5" PointX="17.75" PointY="15.75" />
+        <EntityTypeShape EntityType="seekios_dbModel.alertAndAlertRecipient" Width="1.5" PointX="18.75" PointY="3.75" />
+        <EntityTypeShape EntityType="seekios_dbModel.packCreditAndOperationType" Width="1.5" PointX="18.75" PointY="8.75" />
+        <AssociationConnector Association="seekios_dbModel.fk_alert_alertDefinition1" />
+        <AssociationConnector Association="seekios_dbModel.fk_alert_mode1" />
+        <AssociationConnector Association="seekios_dbModel.fk_alertRecipient_alert1" />
+        <AssociationConnector Association="seekios_dbModel.fk_seekios_alert_idalert" />
+        <AssociationConnector Association="seekios_dbModel.FK_connection_user_iduser" />
+        <AssociationConnector Association="seekios_dbModel.fk_user_countryResources" />
+        <AssociationConnector Association="seekios_dbModel.FK_device_user_iduser" />
+        <AssociationConnector Association="seekios_dbModel.fk_friendship_friend" />
+        <AssociationConnector Association="seekios_dbModel.fk_friendship_user" />
+        <AssociationConnector Association="seekios_dbModel.fk_sharing_friendship" />
+        <AssociationConnector Association="seekios_dbModel.FK__location__locati__60E75331" />
+        <AssociationConnector Association="seekios_dbModel.FK_location_seekios_idseekios" />
+        <AssociationConnector Association="seekios_dbModel.FK__seekios__lastKno__61DB776A" />
+        <AssociationConnector Association="seekios_dbModel.fk_mode_device_statusDefinition_idstatusDefinition" />
+        <AssociationConnector Association="seekios_dbModel.fk_mode_modeDefinition_idmodeDefinition" />
+        <AssociationConnector Association="seekios_dbModel.fk_mode_seekios_idseekios" />
+        <AssociationConnector Association="seekios_dbModel.fk_operation_operationType" />
+        <AssociationConnector Association="seekios_dbModel.fk_user_user_iduser" />
+        <AssociationConnector Association="seekios_dbModel.fk_seekios_seekiosProduction1" />
+        <AssociationConnector Association="seekios_dbModel.fk_seekios_user1" />
+        <AssociationConnector Association="seekios_dbModel.fk_sharing_seekios" />
+        <AssociationConnector Association="seekios_dbModel.fk_seekiosInstruction_seekiosProduction" />
+        <AssociationConnector Association="seekios_dbModel.fk_seekiosProduction_versionEmbedded" />
+        <AssociationConnector Association="seekios_dbModel.fk_token_user_iduser" />
+        <EntityTypeShape EntityType="seekios_dbModel.historyLocation" Width="1.5" PointX="13.25" PointY="20.375" />
+        <AssociationConnector Association="seekios_dbModel.FK__historyLo__locat__5090EFD7" />
+        <AssociationConnector Association="seekios_dbModel.FK_historyLocation_seekios_idseekios" />
+        <EntityTypeShape EntityType="seekios_dbModel.seekiosAndSeekiosProduction" Width="3.625" PointX="20.375" PointY="12.875" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

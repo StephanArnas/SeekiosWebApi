@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="seekios_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="alert">
+    <Key>
+      <PropertyRef Name="idalert" />
+    </Key>
+    <Property Name="idalert" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="content" Type="varchar" MaxLength="500" />
+    <Property Name="mode_idmode" Type="int" />
+    <Property Name="title" Type="varchar" MaxLength="50" />
+    <Property Name="alertDefinition_idalertType" Type="int" Nullable="false" />
+    <Property Name="dateAlertCreation" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="device">
+    <Key>
+      <PropertyRef Name="iddevice" />
+    </Key>
+    <Property Name="iddevice" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="deviceName" Type="varchar" MaxLength="45" />
+    <Property Name="os" Type="varchar" MaxLength="150" />
+    <Property Name="plateform" Type="varchar" MaxLength="45" />
+    <Property Name="macAdress" Type="varchar" MaxLength="45" />
+    <Property Name="notificationPlayerId" Type="varchar" MaxLength="200" />
+    <Property Name="lastUseDate" Type="datetime" Nullable="false" />
+    <Property Name="uidDevice" Type="varchar" MaxLength="150" />
+    <Property Name="doNotDisturb" Type="int" Nullable="false" />
+    <Property Name="countryCode" Type="varchar" MaxLength="20" />
+    <Property Name="user_iduser" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="location">
+    <Key>
+      <PropertyRef Name="idlocation" />
+    </Key>
+    <Property Name="idlocation" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="longitude" Type="float" />
+    <Property Name="latitude" Type="float" />
+    <Property Name="altitude" Type="float" />
+    <Property Name="accuracy" Type="float" />
+    <Property Name="dateLocationCreation" Type="datetime" />
+    <Property Name="mode_idmode" Type="int" />
+    <Property Name="seekios_idseekios" Type="int" Nullable="false" />
+    <Property Name="locationDefinition_idlocationDefinition" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mode">
+    <Key>
+      <PropertyRef Name="idmode" />
+    </Key>
+    <Property Name="idmode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dateModeCreation" Type="datetime" />
+    <Property Name="trame" Type="varchar" MaxLength="2000" />
+    <Property Name="countOfTriggeredAlert" Type="int" />
+    <Property Name="lastTriggeredAlertDate" Type="datetime" />
+    <Property Name="seekios_idseekios" Type="int" Nullable="false" />
+    <Property Name="modeDefinition_idmodeDefinition" Type="int" Nullable="false" />
+    <Property Name="statusDefinition_idstatusDefinition" Type="int" Nullable="false" />
+    <Property Name="device_iddevice" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="operation">
+    <Key>
+      <PropertyRef Name="idoperation" />
+    </Key>
+    <Property Name="idoperation" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dateBeginOperation" Type="datetime" Nullable="false" />
+    <Property Name="dateEndOperation" Type="datetime" />
+    <Property Name="user_iduser" Type="int" Nullable="false" />
+    <Property Name="seekios_idseekios" Type="int" />
+    <Property Name="mode_idmode" Type="int" />
+    <Property Name="operationType_idoperationType" Type="int" Nullable="false" />
+    <Property Name="amount" Type="int" Nullable="false" />
+    <Property Name="isOnSeekios" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="operationFromStore">
+    <Key>
+      <PropertyRef Name="idoperationFromStore" />
+    </Key>
+    <Property Name="idoperationFromStore" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idPack" Type="int" Nullable="false" />
+    <Property Name="idUser" Type="int" Nullable="false" />
+    <Property Name="status" Type="text" />
+    <Property Name="dateTransaction" Type="datetime" Nullable="false" />
+    <Property Name="refStore" Type="text" />
+    <Property Name="versionApp" Type="text" />
+    <Property Name="creditsPurchased" Type="int" Nullable="false" />
+    <Property Name="isPackPremium" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="packCredit">
+    <Key>
+      <PropertyRef Name="idcreditPack" />
+    </Key>
+    <Property Name="idcreditPack" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="price" Type="varchar" MaxLength="10" />
+    <Property Name="rewarding" Type="int" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="isPromotion" Type="int" Nullable="false" />
+    <Property Name="promotion" Type="varchar" MaxLength="50" />
+    <Property Name="colorBacground" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="colorHeaderBackground" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="language" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="idProduct" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="operation_idOperationType" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="seekios">
+    <Key>
+      <PropertyRef Name="idseekios" />
+    </Key>
+    <Property Name="idseekios" Type="int" Nullable="false" />
+    <Property Name="seekiosName" Type="varchar" MaxLength="250" />
+    <Property Name="seekiosPicture" Type="image" />
+    <Property Name="seekios_dateCretaion" Type="datetime" Nullable="false" />
+    <Property Name="batteryLife" Type="int" />
+    <Property Name="signalQuality" Type="int" />
+    <Property Name="dateLastCommunication" Type="datetime" />
+    <Property Name="lastKnownLocation_longitude" Type="float" Nullable="false" />
+    <Property Name="lastKnownLocation_latitude" Type="float" Nullable="false" />
+    <Property Name="lastKnownLocation_altitude" Type="float" />
+    <Property Name="lastKnownLocation_accuracy" Type="float" />
+    <Property Name="lastKnownLocation_dateLocationCreation" Type="datetime" />
+    <Property Name="user_iduser" Type="int" Nullable="false" />
+    <Property Name="hasGetLastInstruction" Type="tinyint" Nullable="false" />
+    <Property Name="isAlertLowBattery" Type="tinyint" Nullable="false" />
+    <Property Name="isInPowerSaving" Type="tinyint" Nullable="false" />
+    <Property Name="powerSaving_hourStart" Type="int" Nullable="false" />
+    <Property Name="powerSaving_hourEnd" Type="int" Nullable="false" />
+    <Property Name="alertSOS_idalert" Type="int" />
+    <Property Name="isRefreshingBattery" Type="tinyint" Nullable="false" />
+    <Property Name="dateLastOnDemandRequest" Type="datetime" />
+    <Property Name="isLastSOSRead" Type="tinyint" />
+    <Property Name="lastKnowLocation_idlocationDefinition" Type="int" Nullable="false" />
+    <Property Name="dateLastSOSSent" Type="datetime" />
+  </EntityType>
+  <EntityType Name="seekiosProduction">
+    <Key>
+      <PropertyRef Name="idseekiosProduction" />
+    </Key>
+    <Property Name="idseekiosProduction" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="imei" Type="varchar" MaxLength="20" />
+    <Property Name="uidSeekios" Type="char" MaxLength="8" />
+    <Property Name="macAddress" Type="varchar" MaxLength="45" />
+    <Property Name="imsi" Type="varchar" MaxLength="32" />
+    <Property Name="lastUpdateConfirmed" Type="tinyint" />
+    <Property Name="versionEmbedded_idversionEmbedded" Type="int" Nullable="false" />
+    <Property Name="dateFirstRegistration" Type="datetime" />
+    <Property Name="freeCredit" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="token">
+    <Key>
+      <PropertyRef Name="idToken" />
+      <PropertyRef Name="authToken" />
+    </Key>
+    <Property Name="idToken" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_iduser" Type="int" Nullable="false" />
+    <Property Name="authToken" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="dateCreationToken" Type="datetime" Nullable="false" />
+    <Property Name="dateExpiresToken" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="iduser" />
+    </Key>
+    <Property Name="iduser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="250" />
+    <Property Name="firstName" Type="varchar" MaxLength="250" />
+    <Property Name="lastName" Type="varchar" MaxLength="250" />
+    <Property Name="remainingRequest" Type="int" />
+    <Property Name="userPicture" Type="image" />
+    <Property Name="isValidate" Type="bit" />
+    <Property Name="defaultTheme" Type="int" />
+    <Property Name="dateLastConnection" Type="datetime" />
+    <Property Name="phoneNumber" Type="varchar" MaxLength="45" />
+    <Property Name="socialNetworkUserId" Type="varchar" MaxLength="150" />
+    <Property Name="socialNetworkType" Type="int" />
+    <Property Name="dateCreation" Type="datetime" />
+    <Property Name="validationToken" Type="varchar" MaxLength="128" />
+    <Property Name="resetPasswordToken" Type="varchar" MaxLength="128" />
+    <Property Name="countryResources_idcountryResources" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="versionApplication">
+    <Key>
+      <PropertyRef Name="idversionApplication" />
+    </Key>
+    <Property Name="idversionApplication" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="versionNumber" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="isNeedUpdate" Type="tinyint" Nullable="false" />
+    <Property Name="plateforme" Type="int" Nullable="false" />
+    <Property Name="version_dateCreation" Type="datetime" Nullable="false" />
+    <Property Name="pubKey_googleLicence" Type="text" />
+  </EntityType>
+  <EntityType Name="versionEmbedded">
+    <Key>
+      <PropertyRef Name="idVersionEmbedded" />
+    </Key>
+    <Property Name="idVersionEmbedded" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="versionName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="dateVersionCreation" Type="datetime" Nullable="false" />
+    <Property Name="releaseNotes" Type="text" />
+    <Property Name="SHA1Hash" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_alert_mode1">
+    <End Role="mode" Type="Self.mode" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="alert" Type="Self.alert" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mode">
+        <PropertyRef Name="idmode" />
+      </Principal>
+      <Dependent Role="alert">
+        <PropertyRef Name="mode_idmode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_device_user_iduser">
+    <End Role="user" Type="Self.user" Multiplicity="1" />
+    <End Role="device" Type="Self.device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="iduser" />
+      </Principal>
+      <Dependent Role="device">
+        <PropertyRef Name="user_iduser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_location_seekios_idseekios">
+    <End Role="seekiosProduction" Type="Self.seekiosProduction" Multiplicity="1" />
+    <End Role="location" Type="Self.location" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="seekiosProduction">
+        <PropertyRef Name="idseekiosProduction" />
+      </Principal>
+      <Dependent Role="location">
+        <PropertyRef Name="seekios_idseekios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_mode_seekios_idseekios">
+    <End Role="seekios" Type="Self.seekios" Multiplicity="1" />
+    <End Role="mode" Type="Self.mode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="seekios">
+        <PropertyRef Name="idseekios" />
+      </Principal>
+      <Dependent Role="mode">
+        <PropertyRef Name="seekios_idseekios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_seekios_alert_idalert">
+    <End Role="alert" Type="Self.alert" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="seekios" Type="Self.seekios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="alert">
+        <PropertyRef Name="idalert" />
+      </Principal>
+      <Dependent Role="seekios">
+        <PropertyRef Name="alertSOS_idalert" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_seekios_seekiosProduction1">
+    <End Role="seekiosProduction" Type="Self.seekiosProduction" Multiplicity="1" />
+    <End Role="seekios" Type="Self.seekios" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="seekiosProduction">
+        <PropertyRef Name="idseekiosProduction" />
+      </Principal>
+      <Dependent Role="seekios">
+        <PropertyRef Name="idseekios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_seekios_user1">
+    <End Role="user" Type="Self.user" Multiplicity="1" />
+    <End Role="seekios" Type="Self.seekios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="iduser" />
+      </Principal>
+      <Dependent Role="seekios">
+        <PropertyRef Name="user_iduser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_seekiosProduction_versionEmbedded">
+    <End Role="versionEmbedded" Type="Self.versionEmbedded" Multiplicity="1" />
+    <End Role="seekiosProduction" Type="Self.seekiosProduction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="versionEmbedded">
+        <PropertyRef Name="idVersionEmbedded" />
+      </Principal>
+      <Dependent Role="seekiosProduction">
+        <PropertyRef Name="versionEmbedded_idversionEmbedded" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_token_user_iduser">
+    <End Role="user" Type="Self.user" Multiplicity="1" />
+    <End Role="token" Type="Self.token" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="iduser" />
+      </Principal>
+      <Dependent Role="token">
+        <PropertyRef Name="user_iduser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_user_user_iduser">
+    <End Role="user" Type="Self.user" Multiplicity="1" />
+    <End Role="operation" Type="Self.operation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="iduser" />
+      </Principal>
+      <Dependent Role="operation">
+        <PropertyRef Name="user_iduser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="DeleteModeById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdMode" Type="int" Mode="In" />
+    <Parameter Name="Result" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DeleteSeekiosById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdSeekios" Type="int" Mode="In" />
+    <Parameter Name="result" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="DeleteUserByIDuser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="iduser" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="seekios_dbModelStoreContainer">
+    <EntitySet Name="alert" EntityType="Self.alert" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="device" EntityType="Self.device" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="location" EntityType="Self.location" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mode" EntityType="Self.mode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="operation" EntityType="Self.operation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="operationFromStore" EntityType="Self.operationFromStore" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="packCredit" EntityType="Self.packCredit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="seekios" EntityType="Self.seekios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="seekiosProduction" EntityType="Self.seekiosProduction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="token" EntityType="Self.token" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="versionApplication" EntityType="Self.versionApplication" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="versionEmbedded" EntityType="Self.versionEmbedded" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_alert_mode1" Association="Self.fk_alert_mode1">
+      <End Role="mode" EntitySet="mode" />
+      <End Role="alert" EntitySet="alert" />
+    </AssociationSet>
+    <AssociationSet Name="FK_device_user_iduser" Association="Self.FK_device_user_iduser">
+      <End Role="user" EntitySet="user" />
+      <End Role="device" EntitySet="device" />
+    </AssociationSet>
+    <AssociationSet Name="FK_location_seekios_idseekios" Association="Self.FK_location_seekios_idseekios">
+      <End Role="seekiosProduction" EntitySet="seekiosProduction" />
+      <End Role="location" EntitySet="location" />
+    </AssociationSet>
+    <AssociationSet Name="fk_mode_seekios_idseekios" Association="Self.fk_mode_seekios_idseekios">
+      <End Role="seekios" EntitySet="seekios" />
+      <End Role="mode" EntitySet="mode" />
+    </AssociationSet>
+    <AssociationSet Name="fk_seekios_alert_idalert" Association="Self.fk_seekios_alert_idalert">
+      <End Role="alert" EntitySet="alert" />
+      <End Role="seekios" EntitySet="seekios" />
+    </AssociationSet>
+    <AssociationSet Name="fk_seekios_seekiosProduction1" Association="Self.fk_seekios_seekiosProduction1">
+      <End Role="seekiosProduction" EntitySet="seekiosProduction" />
+      <End Role="seekios" EntitySet="seekios" />
+    </AssociationSet>
+    <AssociationSet Name="fk_seekios_user1" Association="Self.fk_seekios_user1">
+      <End Role="user" EntitySet="user" />
+      <End Role="seekios" EntitySet="seekios" />
+    </AssociationSet>
+    <AssociationSet Name="fk_seekiosProduction_versionEmbedded" Association="Self.fk_seekiosProduction_versionEmbedded">
+      <End Role="versionEmbedded" EntitySet="versionEmbedded" />
+      <End Role="seekiosProduction" EntitySet="seekiosProduction" />
+    </AssociationSet>
+    <AssociationSet Name="fk_token_user_iduser" Association="Self.fk_token_user_iduser">
+      <End Role="user" EntitySet="user" />
+      <End Role="token" EntitySet="token" />
+    </AssociationSet>
+    <AssociationSet Name="fk_user_user_iduser" Association="Self.fk_user_user_iduser">
+      <End Role="user" EntitySet="user" />
+      <End Role="operation" EntitySet="operation" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

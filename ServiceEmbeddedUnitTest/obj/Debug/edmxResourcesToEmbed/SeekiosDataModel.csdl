@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="seekios_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="seekiosInstruction">
+    <Key>
+      <PropertyRef Name="idseekiosInstruction" />
+    </Key>
+    <Property Name="idseekiosInstruction" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="instruction" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="dateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="seekiosProduction_idseekiosProduction" Type="Int32" Nullable="false" />
+    <Property Name="instructionType" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="seekios_dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="seekiosInstruction" EntityType="Self.seekiosInstruction" />
+    <EntitySet Name="mode" EntityType="seekios_dbModel.mode" />
+    <EntitySet Name="device" EntityType="seekios_dbModel.device" />
+  </EntityContainer>
+  <EntityType Name="mode">
+    <Key>
+      <PropertyRef Name="idmode" />
+    </Key>
+    <Property Name="idmode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dateModeCreation" Type="DateTime" Precision="3" />
+    <Property Name="trame" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="countOfTriggeredAlert" Type="Int32" />
+    <Property Name="lastTriggeredAlertDate" Type="DateTime" Precision="3" />
+    <Property Name="seekios_idseekios" Type="Int32" Nullable="false" />
+    <Property Name="modeDefinition_idmodeDefinition" Type="Int32" Nullable="false" />
+    <Property Name="statusDefinition_idstatusDefinition" Type="Int32" Nullable="false" />
+    <Property Name="device_iddevice" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="device">
+    <Key>
+      <PropertyRef Name="iddevice" />
+    </Key>
+    <Property Name="iddevice" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="deviceName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="os" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="plateform" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="macAdress" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="notificationPlayerId" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="lastUseDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="uidDevice" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="doNotDisturb" Type="Int32" Nullable="false" />
+    <Property Name="countryCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="user_iduser" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

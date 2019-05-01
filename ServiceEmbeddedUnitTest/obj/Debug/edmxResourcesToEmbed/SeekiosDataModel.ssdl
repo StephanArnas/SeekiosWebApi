@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="seekios_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="device">
+    <Key>
+      <PropertyRef Name="iddevice" />
+    </Key>
+    <Property Name="iddevice" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="deviceName" Type="varchar" MaxLength="45" />
+    <Property Name="os" Type="varchar" MaxLength="150" />
+    <Property Name="plateform" Type="varchar" MaxLength="45" />
+    <Property Name="macAdress" Type="varchar" MaxLength="45" />
+    <Property Name="notificationPlayerId" Type="varchar" MaxLength="200" />
+    <Property Name="lastUseDate" Type="datetime" Nullable="false" />
+    <Property Name="uidDevice" Type="varchar" MaxLength="150" />
+    <Property Name="doNotDisturb" Type="int" Nullable="false" />
+    <Property Name="countryCode" Type="varchar" MaxLength="20" />
+    <Property Name="user_iduser" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mode">
+    <Key>
+      <PropertyRef Name="idmode" />
+    </Key>
+    <Property Name="idmode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dateModeCreation" Type="datetime" />
+    <Property Name="trame" Type="varchar" MaxLength="2000" />
+    <Property Name="countOfTriggeredAlert" Type="int" />
+    <Property Name="lastTriggeredAlertDate" Type="datetime" />
+    <Property Name="seekios_idseekios" Type="int" Nullable="false" />
+    <Property Name="modeDefinition_idmodeDefinition" Type="int" Nullable="false" />
+    <Property Name="statusDefinition_idstatusDefinition" Type="int" Nullable="false" />
+    <Property Name="device_iddevice" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="seekiosInstruction">
+    <Key>
+      <PropertyRef Name="idseekiosInstruction" />
+    </Key>
+    <Property Name="idseekiosInstruction" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="instruction" Type="varchar" MaxLength="500" />
+    <Property Name="dateCreation" Type="datetime" Nullable="false" />
+    <Property Name="seekiosProduction_idseekiosProduction" Type="int" Nullable="false" />
+    <Property Name="instructionType" Type="int" />
+  </EntityType>
+  <EntityContainer Name="seekios_dbModelStoreContainer">
+    <EntitySet Name="device" EntityType="Self.device" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mode" EntityType="Self.mode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="seekiosInstruction" EntityType="Self.seekiosInstruction" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

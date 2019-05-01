@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WCFServiceWebRoleEmbedded.SES" CodeBehind="SES.svc.cs" %>

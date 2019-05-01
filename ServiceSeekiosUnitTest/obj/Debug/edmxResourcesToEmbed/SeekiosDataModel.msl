@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="seekios_dbModelStoreContainer" CdmEntityContainer="seekios_dbEntities">
+    <EntitySetMapping Name="user">
+      <EntityTypeMapping TypeName="seekios_dbModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="iduser" ColumnName="iduser" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="remainingRequest" ColumnName="remainingRequest" />
+          <ScalarProperty Name="userPicture" ColumnName="userPicture" />
+          <ScalarProperty Name="isValidate" ColumnName="isValidate" />
+          <ScalarProperty Name="defaultTheme" ColumnName="defaultTheme" />
+          <ScalarProperty Name="dateLastConnection" ColumnName="dateLastConnection" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="socialNetworkUserId" ColumnName="socialNetworkUserId" />
+          <ScalarProperty Name="socialNetworkType" ColumnName="socialNetworkType" />
+          <ScalarProperty Name="dateCreation" ColumnName="dateCreation" />
+          <ScalarProperty Name="validationToken" ColumnName="validationToken" />
+          <ScalarProperty Name="resetPasswordToken" ColumnName="resetPasswordToken" />
+          <ScalarProperty Name="countryResources_idcountryResources" ColumnName="countryResources_idcountryResources" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="DeleteUserByIDuser" FunctionName="seekios_dbModel.Store.DeleteUserByIDuser" />
+    <FunctionImportMapping FunctionImportName="DeleteModeById" FunctionName="seekios_dbModel.Store.DeleteModeById" />
+    <FunctionImportMapping FunctionImportName="DeleteSeekiosById" FunctionName="seekios_dbModel.Store.DeleteSeekiosById" />
+    <EntitySetMapping Name="seekiosProduction">
+      <EntityTypeMapping TypeName="seekios_dbModel.seekiosProduction">
+        <MappingFragment StoreEntitySet="seekiosProduction">
+          <ScalarProperty Name="freeCredit" ColumnName="freeCredit" />
+          <ScalarProperty Name="dateFirstRegistration" ColumnName="dateFirstRegistration" />
+          <ScalarProperty Name="versionEmbedded_idversionEmbedded" ColumnName="versionEmbedded_idversionEmbedded" />
+          <ScalarProperty Name="lastUpdateConfirmed" ColumnName="lastUpdateConfirmed" />
+          <ScalarProperty Name="imsi" ColumnName="imsi" />
+          <ScalarProperty Name="macAddress" ColumnName="macAddress" />
+          <ScalarProperty Name="uidSeekios" ColumnName="uidSeekios" />
+          <ScalarProperty Name="imei" ColumnName="imei" />
+          <ScalarProperty Name="idseekiosProduction" ColumnName="idseekiosProduction" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="device">
+      <EntityTypeMapping TypeName="seekios_dbModel.device">
+        <MappingFragment StoreEntitySet="device">
+          <ScalarProperty Name="user_iduser" ColumnName="user_iduser" />
+          <ScalarProperty Name="countryCode" ColumnName="countryCode" />
+          <ScalarProperty Name="doNotDisturb" ColumnName="doNotDisturb" />
+          <ScalarProperty Name="uidDevice" ColumnName="uidDevice" />
+          <ScalarProperty Name="lastUseDate" ColumnName="lastUseDate" />
+          <ScalarProperty Name="notificationPlayerId" ColumnName="notificationPlayerId" />
+          <ScalarProperty Name="macAdress" ColumnName="macAdress" />
+          <ScalarProperty Name="plateform" ColumnName="plateform" />
+          <ScalarProperty Name="os" ColumnName="os" />
+          <ScalarProperty Name="deviceName" ColumnName="deviceName" />
+          <ScalarProperty Name="iddevice" ColumnName="iddevice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="versionApplication">
+      <EntityTypeMapping TypeName="seekios_dbModel.versionApplication">
+        <MappingFragment StoreEntitySet="versionApplication">
+          <ScalarProperty Name="pubKey_googleLicence" ColumnName="pubKey_googleLicence" />
+          <ScalarProperty Name="version_dateCreation" ColumnName="version_dateCreation" />
+          <ScalarProperty Name="plateforme" ColumnName="plateforme" />
+          <ScalarProperty Name="isNeedUpdate" ColumnName="isNeedUpdate" />
+          <ScalarProperty Name="versionNumber" ColumnName="versionNumber" />
+          <ScalarProperty Name="idversionApplication" ColumnName="idversionApplication" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="operation">
+      <EntityTypeMapping TypeName="seekios_dbModel.operation">
+        <MappingFragment StoreEntitySet="operation">
+          <ScalarProperty Name="isOnSeekios" ColumnName="isOnSeekios" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="operationType_idoperationType" ColumnName="operationType_idoperationType" />
+          <ScalarProperty Name="mode_idmode" ColumnName="mode_idmode" />
+          <ScalarProperty Name="seekios_idseekios" ColumnName="seekios_idseekios" />
+          <ScalarProperty Name="user_iduser" ColumnName="user_iduser" />
+          <ScalarProperty Name="dateEndOperation" ColumnName="dateEndOperation" />
+          <ScalarProperty Name="dateBeginOperation" ColumnName="dateBeginOperation" />
+          <ScalarProperty Name="idoperation" ColumnName="idoperation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="operationFromStore">
+      <EntityTypeMapping TypeName="seekios_dbModel.operationFromStore">
+        <MappingFragment StoreEntitySet="operationFromStore">
+          <ScalarProperty Name="isPackPremium" ColumnName="isPackPremium" />
+          <ScalarProperty Name="creditsPurchased" ColumnName="creditsPurchased" />
+          <ScalarProperty Name="versionApp" ColumnName="versionApp" />
+          <ScalarProperty Name="refStore" ColumnName="refStore" />
+          <ScalarProperty Name="dateTransaction" ColumnName="dateTransaction" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="idUser" ColumnName="idUser" />
+          <ScalarProperty Name="idPack" ColumnName="idPack" />
+          <ScalarProperty Name="idoperationFromStore" ColumnName="idoperationFromStore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="packCredit">
+      <EntityTypeMapping TypeName="seekios_dbModel.packCredit">
+        <MappingFragment StoreEntitySet="packCredit">
+          <ScalarProperty Name="operation_idOperationType" ColumnName="operation_idOperationType" />
+          <ScalarProperty Name="idProduct" ColumnName="idProduct" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="colorHeaderBackground" ColumnName="colorHeaderBackground" />
+          <ScalarProperty Name="colorBacground" ColumnName="colorBacground" />
+          <ScalarProperty Name="promotion" ColumnName="promotion" />
+          <ScalarProperty Name="isPromotion" ColumnName="isPromotion" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="rewarding" ColumnName="rewarding" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="idcreditPack" ColumnName="idcreditPack" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="versionEmbedded">
+      <EntityTypeMapping TypeName="seekios_dbModel.versionEmbedded">
+        <MappingFragment StoreEntitySet="versionEmbedded">
+          <ScalarProperty Name="SHA1Hash" ColumnName="SHA1Hash" />
+          <ScalarProperty Name="releaseNotes" ColumnName="releaseNotes" />
+          <ScalarProperty Name="dateVersionCreation" ColumnName="dateVersionCreation" />
+          <ScalarProperty Name="versionName" ColumnName="versionName" />
+          <ScalarProperty Name="idVersionEmbedded" ColumnName="idVersionEmbedded" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="alert">
+      <EntityTypeMapping TypeName="seekios_dbModel.alert">
+        <MappingFragment StoreEntitySet="alert">
+          <ScalarProperty Name="dateAlertCreation" ColumnName="dateAlertCreation" />
+          <ScalarProperty Name="alertDefinition_idalertType" ColumnName="alertDefinition_idalertType" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="mode_idmode" ColumnName="mode_idmode" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="idalert" ColumnName="idalert" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="location">
+      <EntityTypeMapping TypeName="seekios_dbModel.location">
+        <MappingFragment StoreEntitySet="location">
+          <ScalarProperty Name="locationDefinition_idlocationDefinition" ColumnName="locationDefinition_idlocationDefinition" />
+          <ScalarProperty Name="seekios_idseekios" ColumnName="seekios_idseekios" />
+          <ScalarProperty Name="mode_idmode" ColumnName="mode_idmode" />
+          <ScalarProperty Name="dateLocationCreation" ColumnName="dateLocationCreation" />
+          <ScalarProperty Name="accuracy" ColumnName="accuracy" />
+          <ScalarProperty Name="altitude" ColumnName="altitude" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="idlocation" ColumnName="idlocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mode">
+      <EntityTypeMapping TypeName="seekios_dbModel.mode">
+        <MappingFragment StoreEntitySet="mode">
+          <ScalarProperty Name="device_iddevice" ColumnName="device_iddevice" />
+          <ScalarProperty Name="statusDefinition_idstatusDefinition" ColumnName="statusDefinition_idstatusDefinition" />
+          <ScalarProperty Name="modeDefinition_idmodeDefinition" ColumnName="modeDefinition_idmodeDefinition" />
+          <ScalarProperty Name="seekios_idseekios" ColumnName="seekios_idseekios" />
+          <ScalarProperty Name="lastTriggeredAlertDate" ColumnName="lastTriggeredAlertDate" />
+          <ScalarProperty Name="countOfTriggeredAlert" ColumnName="countOfTriggeredAlert" />
+          <ScalarProperty Name="trame" ColumnName="trame" />
+          <ScalarProperty Name="dateModeCreation" ColumnName="dateModeCreation" />
+          <ScalarProperty Name="idmode" ColumnName="idmode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="seekios">
+      <EntityTypeMapping TypeName="seekios_dbModel.seekios">
+        <MappingFragment StoreEntitySet="seekios">
+          <ScalarProperty Name="dateLastSOSSent" ColumnName="dateLastSOSSent" />
+          <ScalarProperty Name="lastKnowLocation_idlocationDefinition" ColumnName="lastKnowLocation_idlocationDefinition" />
+          <ScalarProperty Name="isLastSOSRead" ColumnName="isLastSOSRead" />
+          <ScalarProperty Name="dateLastOnDemandRequest" ColumnName="dateLastOnDemandRequest" />
+          <ScalarProperty Name="isRefreshingBattery" ColumnName="isRefreshingBattery" />
+          <ScalarProperty Name="alertSOS_idalert" ColumnName="alertSOS_idalert" />
+          <ScalarProperty Name="powerSaving_hourEnd" ColumnName="powerSaving_hourEnd" />
+          <ScalarProperty Name="powerSaving_hourStart" ColumnName="powerSaving_hourStart" />
+          <ScalarProperty Name="isInPowerSaving" ColumnName="isInPowerSaving" />
+          <ScalarProperty Name="isAlertLowBattery" ColumnName="isAlertLowBattery" />
+          <ScalarProperty Name="hasGetLastInstruction" ColumnName="hasGetLastInstruction" />
+          <ScalarProperty Name="user_iduser" ColumnName="user_iduser" />
+          <ScalarProperty Name="lastKnownLocation_dateLocationCreation" ColumnName="lastKnownLocation_dateLocationCreation" />
+          <ScalarProperty Name="lastKnownLocation_accuracy" ColumnName="lastKnownLocation_accuracy" />
+          <ScalarProperty Name="lastKnownLocation_altitude" ColumnName="lastKnownLocation_altitude" />
+          <ScalarProperty Name="lastKnownLocation_latitude" ColumnName="lastKnownLocation_latitude" />
+          <ScalarProperty Name="lastKnownLocation_longitude" ColumnName="lastKnownLocation_longitude" />
+          <ScalarProperty Name="dateLastCommunication" ColumnName="dateLastCommunication" />
+          <ScalarProperty Name="signalQuality" ColumnName="signalQuality" />
+          <ScalarProperty Name="batteryLife" ColumnName="batteryLife" />
+          <ScalarProperty Name="seekios_dateCretaion" ColumnName="seekios_dateCretaion" />
+          <ScalarProperty Name="seekiosPicture" ColumnName="seekiosPicture" />
+          <ScalarProperty Name="seekiosName" ColumnName="seekiosName" />
+          <ScalarProperty Name="idseekios" ColumnName="idseekios" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="token">
+      <EntityTypeMapping TypeName="seekios_dbModel.token">
+        <MappingFragment StoreEntitySet="token">
+          <ScalarProperty Name="dateExpiresToken" ColumnName="dateExpiresToken" />
+          <ScalarProperty Name="dateCreationToken" ColumnName="dateCreationToken" />
+          <ScalarProperty Name="authToken" ColumnName="authToken" />
+          <ScalarProperty Name="user_iduser" ColumnName="user_iduser" />
+          <ScalarProperty Name="idToken" ColumnName="idToken" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

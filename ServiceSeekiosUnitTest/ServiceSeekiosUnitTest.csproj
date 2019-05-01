@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MSTest.TestAdapter.1.1.14\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.1.14\build\net45\MSTest.TestAdapter.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9007BB54-4306-4ECF-9F5C-5B2F402202EF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServiceSeekiosUnitTest</RootNamespace>
+    <AssemblyName>ServiceSeekiosUnitTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="fastjson, Version=2.1.0.0, Culture=neutral, PublicKeyToken=6b75a806b86095cd, processorArchitecture=MSIL">
+      <HintPath>..\packages\fastJSON.2.1.23\lib\net40\fastjson.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.1.14\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.1.14\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Z.EntityFramework.Plus.EF6, Version=1.4.46.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.EntityFramework.Plus.EF6.1.4.46\lib\net45\Z.EntityFramework.Plus.EF6.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="alert.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DB\DBAlert.cs" />
+    <Compile Include="Data\DB\DBAlertRecipient.cs" />
+    <Compile Include="Data\DB\DBAlertWithRecipient.cs" />
+    <Compile Include="Data\DB\DBDevice.cs" />
+    <Compile Include="Data\DB\DBLocation.cs" />
+    <Compile Include="Data\DB\DBMode.cs" />
+    <Compile Include="Data\DB\DBOperation.cs" />
+    <Compile Include="Data\DB\DBOperationFromStore.cs" />
+    <Compile Include="Data\DB\DBPackCredit.cs" />
+    <Compile Include="Data\DB\DBSeekios.cs" />
+    <Compile Include="Data\DB\DBSeekiosProduction.cs" />
+    <Compile Include="Data\DB\DBToken.cs" />
+    <Compile Include="Data\DB\DBUser.cs" />
+    <Compile Include="Data\DB\DBVersionEmbedded.cs" />
+    <Compile Include="Data\DTO\GoogleStorePurchaseDTO.cs" />
+    <Compile Include="Data\DTO\LocationUpperLowerDates.cs" />
+    <Compile Include="Data\DTO\OperationDTO.cs" />
+    <Compile Include="Data\DTO\OperationTransactionDTO.cs" />
+    <Compile Include="Data\DTO\PurchaseDTO.cs" />
+    <Compile Include="Data\DTO\SeekiosHardwareReportDTO.cs" />
+    <Compile Include="Data\DTO\SeekiosIMEIAndPinDTO.cs" />
+    <Compile Include="Data\DTO\ShortSeekiosDTO.cs" />
+    <Compile Include="Data\DTO\UserEnvironment.cs" />
+    <Compile Include="Data\ERROR\DefaultCustomError.cs" />
+    <Compile Include="device.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enum\AlertDefinition.cs" />
+    <Compile Include="Enum\CountryCodeEnum.cs" />
+    <Compile Include="Enum\InstructionType.cs" />
+    <Compile Include="Enum\LocationDefinition.cs" />
+    <Compile Include="Enum\ModeDefinitions.cs" />
+    <Compile Include="Enum\NotificationType.cs" />
+    <Compile Include="Enum\OperationType.cs" />
+    <Compile Include="Enum\PlateformeEnum.cs" />
+    <Compile Include="Enum\SocialNetworkTypes.cs" />
+    <Compile Include="Enum\StatusDefinition.cs" />
+    <Compile Include="Helper\GeneralThreadAffineContext.cs" />
+    <Compile Include="Helper\HttpRequestHelper.cs" />
+    <Compile Include="location.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mode.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="operation.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="operationFromStore.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="packCredit.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="seekios.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SeekiosDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeekiosDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SeekiosDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SeekiosDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeekiosDataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="seekiosProduction.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceSeekiosUnitTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="token.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="versionApplication.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="versionEmbedded.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="SeekiosDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SeekiosDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SeekiosDataModel.edmx.diagram">
+      <DependentUpon>SeekiosDataModel.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SeekiosDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SeekiosDataModel.Context.cs</LastGenOutput>
+      <DependentUpon>SeekiosDataModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="SeekiosDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SeekiosDataModel.edmx</DependentUpon>
+      <LastGenOutput>SeekiosDataModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.1.14\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.1.14\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.1.14\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.1.14\build\net45\MSTest.TestAdapter.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <Import Project="..\packages\MSTest.TestAdapter.1.1.14\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.1.14\build\net45\MSTest.TestAdapter.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+</Project>

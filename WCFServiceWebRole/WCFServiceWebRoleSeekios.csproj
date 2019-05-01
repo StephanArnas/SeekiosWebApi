@@ -1,0 +1,962 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{44800D30-28CB-48C5-9A84-C7D4E57ABDCC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WCFServiceWebRole</RootNamespace>
+    <AssemblyName>WCFServiceWebRole</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+    <DocumentationFile>bin\WCFServiceWebRole.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\WCFServiceWebRole.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.1.3\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.4.1\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.4.1\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.4.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.4.1\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.4.1\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.4.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Client, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.2.2\lib\net45\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.8.1\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.8.1\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.5.8.1\lib\net40\Microsoft.Data.Services.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.8.1\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Diagnostics, Version=2.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SeekiosTools">
+      <HintPath>..\packages\SeekiosTools\SeekiosTools.dll</HintPath>
+    </Reference>
+    <Reference Include="SendGrid, Version=9.8.0.0, Culture=neutral, PublicKeyToken=4f047e93159395ca, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sendgrid.9.9.0\lib\net452\SendGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="SendGrid.CSharp.HTTP.Client, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SendGrid.CSharp.HTTP.Client.3.3.0\lib\SendGrid.CSharp.HTTP.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net45\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.Spatial, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.8.1\lib\net40\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Z.EntityFramework.Plus.EF6, Version=1.6.12.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.EntityFramework.Plus.EF6.1.6.12\lib\net45\Z.EntityFramework.Plus.EF6.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SeekiosDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SeekiosDataModel.edmx</DependentUpon>
+      <LastGenOutput>SeekiosDataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="SeekiosDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SeekiosDataModel.edmx</DependentUpon>
+      <LastGenOutput>SeekiosDataModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="SeekiosService.svc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="alert.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="alertAndAlertRecipient.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="alertDefinition.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="alertRecipient.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="connection.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CORS\CorsMessageInspector.cs" />
+    <Compile Include="CORS\CorsSupportBehavior.cs" />
+    <Compile Include="CORS\CorsSupportBehaviorElement.cs" />
+    <Compile Include="CORS\CustomOperationInvoker.cs" />
+    <Compile Include="CORS\PreflightDetected.cs" />
+    <Compile Include="countryResources.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DB\DBAlert.cs" />
+    <Compile Include="Data\LOCAL\CellsData.cs" />
+    <Compile Include="Data\LOCAL\CellTower.cs" />
+    <Compile Include="Data\LOCAL\Coordinate.cs" />
+    <Compile Include="Data\LOCAL\TriangulationLocation.cs" />
+    <Compile Include="device.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enum\LocationDefinition.cs" />
+    <Compile Include="friendship.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAlertAndAlertSOSByUser_Result.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAlertRecipientAndAlertRecipientSOSByUser_Result.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllSeekiosByUser_Result.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\HttpRequestHelper.cs" />
+    <Compile Include="Helper\SignalRHelper.cs" />
+    <Compile Include="historyAlert.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="historyLocation.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="historyMode.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="historySeekios.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="location.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="locationDefinition.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="logExceptionSeekios.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="logExceptionSES.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="logVodafoneAndOnesignal.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mode.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="modeDefinition.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="operation.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="operationFromStore.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="operationType.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="packCredit.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="packCreditAndOperationType.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Resources.Designer.cs" />
+    <Compile Include="seekios.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="seekiosAndSeekiosProduction.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="seekiosCommunication.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SeekiosDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeekiosDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SeekiosDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SeekiosDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeekiosDataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="seekiosHardwareReport.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="seekiosInstruction.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="seekiosProduction.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sharing.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="statusDefinition.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="token.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UselessCode\DBAlertFavorite.cs" />
+    <Compile Include="Data\DB\DBAlertRecipient.cs" />
+    <Compile Include="Data\DB\DBAlertWithRecipient.cs" />
+    <Compile Include="Data\DB\DBDevice.cs" />
+    <Compile Include="UselessCode\DBFavoriteArea.cs" />
+    <Compile Include="UselessCode\DBFriendship.cs" />
+    <Compile Include="Data\DB\DBLocation.cs" />
+    <Compile Include="Data\DB\DBMode.cs" />
+    <Compile Include="Data\DB\DBPackCredit.cs" />
+    <Compile Include="Data\DB\DBSeekios.cs" />
+    <Compile Include="Data\DB\DBSeekiosProduction.cs" />
+    <Compile Include="UselessCode\DBSharing.cs" />
+    <Compile Include="Data\DB\DBToken.cs" />
+    <Compile Include="Data\DB\DBUser.cs" />
+    <Compile Include="Data\DB\DBVersionEmbedded.cs" />
+    <Compile Include="UselessCode\FriendUserDTO.cs" />
+    <Compile Include="Data\DTO\GoogleStorePurchaseDTO.cs" />
+    <Compile Include="Data\DB\DBOperation.cs" />
+    <Compile Include="Data\DTO\PurchaseDTO.cs" />
+    <Compile Include="Data\DTO\SeekiosHardwareReportDTO.cs" />
+    <Compile Include="Data\DTO\SeekiosIMEIAndPinDTO.cs" />
+    <Compile Include="Data\DTO\ShortSeekiosDTO.cs" />
+    <Compile Include="UselessCode\ShortUserDTO.cs" />
+    <Compile Include="Data\DB\DBOperationFromStore.cs" />
+    <Compile Include="Data\ERROR\DefaultCustomError.cs" />
+    <Compile Include="Data\LOCAL\SeekiosInstruction.cs" />
+    <Compile Include="Data\DTO\LocationUpperLowerDates.cs" />
+    <Compile Include="Data\DTO\UserEnvironment.cs" />
+    <Compile Include="Enum\AlertDefinition.cs" />
+    <Compile Include="Enum\CountryCodeEnum.cs" />
+    <Compile Include="Enum\InstructionType.cs" />
+    <Compile Include="Enum\NotificationType.cs" />
+    <Compile Include="Enum\OperationType.cs" />
+    <Compile Include="Enum\PlateformeEnum.cs" />
+    <Compile Include="Enum\SocialNetworkTypes.cs" />
+    <Compile Include="Enum\ModeDefinitions.cs" />
+    <Compile Include="Enum\StatusDefinition.cs" />
+    <Compile Include="ExceptionLog\ErrorHandler.cs" />
+    <Compile Include="ExceptionLog\ErrorHandlerAttribute.cs" />
+    <Compile Include="Extension\StringExtensions.cs" />
+    <Compile Include="Helper\CreditBillingHelper.cs" />
+    <Compile Include="Helper\NotificationHelper.cs" />
+    <Compile Include="Helper\ResourcesHelper.cs" />
+    <Compile Include="Helper\SendGridHelper.cs" />
+    <Compile Include="UselessCode\SignalRHelper.cs" />
+    <Compile Include="Helper\TriangulationHelper.cs" />
+    <Compile Include="ISeekiosService.cs" />
+    <Compile Include="UselessCode\AuthorizationManager.cs" />
+    <Compile Include="Security\TokenGenerator.cs" />
+    <Compile Include="SeekiosService.svc.cs">
+      <DependentUpon>SeekiosService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\VodafoneM2M\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UselessCode\SeekiosService.cs" />
+    <Compile Include="UselessCode\ActiveSIM.cs" />
+    <Compile Include="UselessCode\SMS.cs" />
+    <Compile Include="user.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="versionApplication.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="versionEmbedded.cs">
+      <DependentUpon>SeekiosDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VodafoneAPI\SubmitSimWUTrigger.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="SeekiosDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SeekiosDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="SeekiosDataModel.edmx.diagram">
+      <DependentUpon>SeekiosDataModel.edmx</DependentUpon>
+    </Content>
+    <None Include="Service References\VodafoneM2M\configuration91.svcinfo" />
+    <None Include="Service References\VodafoneM2M\configuration.svcinfo" />
+    <None Include="Service References\VodafoneM2M\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Service References\VodafoneM2M\extWebServices.wsdl" />
+    <None Include="Service References\VodafoneM2M\extWebServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.cloneCustomerServiceProfileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.cloneCustomerServiceProfileResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.cloneCustomerServiceProfilev2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.cloneCustomerServiceProfilev2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.cloneCustomerServiceProfilev3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.cloneCustomerServiceProfilev3Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.cloneCustomerServiceProfilev4Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.cloneCustomerServiceProfilev4Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.cloneCustomerServiceProfilev5Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.cloneCustomerServiceProfilev5Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.createUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.createUserResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getBaseCountryListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getBaseCountryListResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getContactDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getContactDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getCustomerDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getCustomerDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getCustomerDetailsv2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getCustomerDetailsv2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getCustomerServiceProfileDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getCustomerServiceProfileDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getCustomerServiceProfileDetailsv2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getCustomerServiceProfileDetailsv2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getCustomerServiceProfileDetailsv3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getCustomerServiceProfileDetailsv3Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getCustomerServiceProfileDetailsv4Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getCustomerServiceProfileDetailsv4Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getCustomerServiceProfileDetailsv5Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getCustomerServiceProfileDetailsv5Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getCustomerServiceProfileListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getCustomerServiceProfileListResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getCustomerSimOrderListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getCustomerSimOrderListResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getDeviceDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getDeviceDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getDeviceDetailsv2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getDeviceDetailsv2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getDeviceHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getDeviceHistoryResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getDeviceLocationDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getDeviceLocationDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getDeviceLocationHistoryDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getDeviceLocationHistoryDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getDeviceRegistrationDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getDeviceRegistrationDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getDeviceStateListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getDeviceStateListResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getFilteredDeviceListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getFilteredDeviceListResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getFilteredDeviceListv2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getFilteredDeviceListv3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getFilteredDeviceListv3Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getFilteredDeviceListv4Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getFilteredDeviceListv4Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getFilteredSimListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getFilteredSimListResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getProvisioningProfileListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getProvisioningProfileListResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getReportDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getReportDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getReportListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getReportListResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getReportResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSimDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSimDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSimDetailsv2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSimDetailsv2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSimHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSimHistoryResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSimHistoryv2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSimHistoryv2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSimHistoryv3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSimHistoryv3Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSimLocationDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSimLocationDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSimLocationHistoryDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSimLocationHistoryDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSimRegistrationDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSimRegistrationDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSimSmsCommunicationOverviewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSimSmsCommunicationOverviewResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSmsCommunicationOverviewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSmsCommunicationOverviewResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSmsCommunicationOverviewv2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getSmsCommunicationOverviewv2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getTariffListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getTariffListResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getTransactionListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getTransactionListResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getTransactionListv2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getTransactionListv2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getUserDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getUserDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getUserListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getUserListResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getVpnGroupListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.getVpnGroupListResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.moveSIMToCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.moveSIMToCustomerResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.retrieveReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.retrieveReportResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setContactDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setContactDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setCustomerDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setCustomerDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setCustomerDetailsv2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setCustomerDetailsv2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setCustomerServiceProfileDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setCustomerServiceProfileDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setCustomerServiceProfileDetailsv2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setCustomerServiceProfileDetailsv2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setCustomerServiceProfileDetailsv3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setCustomerServiceProfileDetailsv3Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setCustomerServiceProfileDetailsv4Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setCustomerServiceProfileDetailsv4Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setCustomerServiceProfileDetailsv5Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setCustomerServiceProfileDetailsv5Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setDeviceCredentialsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setDeviceCredentialsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setDeviceCredentialsv2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setDeviceCredentialsv2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setDeviceDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setDeviceDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setDeviceDetailsv2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setDeviceDetailsv2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setDeviceDetailsv3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setDeviceDetailsv3Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setDeviceDetailsv4Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setDeviceDetailsv4Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setSimCredentialsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setSimCredentialsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setSimDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setSimDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setUserDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.setUserDetailsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.submitReportRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.submitReportRequestResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.submitSimSMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.SubmitSimSMSResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.submitSimTransactionalSMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.SubmitSimTransactionalSMSResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.submitSimWUTriggerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.submitSimWUTriggerResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.submitSMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.SubmitSMSResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.submitSMSv2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.SubmitSMSv2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.submitSMSv3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.SubmitSMSv3Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.submitTransactionalSMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.SubmitTransactionalSMSResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.submitWUTriggerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.submitWUTriggerResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.submitWUTriggerv2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.submitWUTriggerv2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.submitWUTriggerv3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.submitWUTriggerv3Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.updateDeviceCredentialsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.updateDeviceCredentialsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.updateDeviceCredentialsv2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.updateDeviceCredentialsv2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.updateSimCredentialsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\VodafoneM2M\WCFServiceWebRole.VodafoneM2M.updateSimCredentialsResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\VodafoneM2M\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.en-GB.resx" />
+    <EmbeddedResource Include="Resources.fr-FR.resx" />
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+          <servers defaultServer="SelfHostServer">
+            <server name="SelfHostServer" exePath="" cmdArgs="" url="http://localhost:56093/" workingDir="" />
+          </servers>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

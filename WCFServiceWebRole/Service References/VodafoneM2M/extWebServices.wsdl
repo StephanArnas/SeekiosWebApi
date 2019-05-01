@@ -1,0 +1,2551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.gdsp.vodafone.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="extWebServices" targetNamespace="http://ws.gdsp.vodafone.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="../schemas/extWebServices.xsd" namespace="http://ws.gdsp.vodafone.com/" />
+    </xsd:schema>
+  </types>
+  <message name="cloneCustomerServiceProfile">
+    <part name="parameters" element="tns:cloneCustomerServiceProfile" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="cloneCustomerServiceProfileResponse">
+    <part name="result" element="tns:cloneCustomerServiceProfileResponse" />
+  </message>
+  <message name="cloneCustomerServiceProfilev2">
+    <part name="parameters" element="tns:cloneCustomerServiceProfilev2" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="cloneCustomerServiceProfilev2Response">
+    <part name="result" element="tns:cloneCustomerServiceProfilev2Response" />
+  </message>
+  <message name="cloneCustomerServiceProfilev3">
+    <part name="parameters" element="tns:cloneCustomerServiceProfilev3" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="cloneCustomerServiceProfilev3Response">
+    <part name="result" element="tns:cloneCustomerServiceProfilev3Response" />
+  </message>
+  <message name="cloneCustomerServiceProfilev4">
+    <part name="parameters" element="tns:cloneCustomerServiceProfilev4" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="cloneCustomerServiceProfilev4Response">
+    <part name="result" element="tns:cloneCustomerServiceProfilev4Response" />
+  </message>
+  <message name="createUser">
+    <part name="parameters" element="tns:createUser" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="createUserResponse">
+    <part name="result" element="tns:createUserResponse" />
+  </message>
+  <message name="setDeviceCredentials">
+    <part name="parameters" element="tns:setDeviceCredentials" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="setDeviceCredentialsResponse">
+    <part name="result" element="tns:setDeviceCredentialsResponse" />
+  </message>
+  <message name="updateDeviceCredentials">
+    <part name="parameters" element="tns:updateDeviceCredentials" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="updateDeviceCredentialsResponse">
+    <part name="result" element="tns:updateDeviceCredentialsResponse" />
+  </message>
+  <message name="setDeviceCredentialsv2">
+    <part name="parameters" element="tns:setDeviceCredentialsv2" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="setDeviceCredentialsv2Response">
+    <part name="result" element="tns:setDeviceCredentialsv2Response" />
+  </message>
+  <message name="updateDeviceCredentialsv2">
+    <part name="parameters" element="tns:updateDeviceCredentialsv2" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="updateDeviceCredentialsv2Response">
+    <part name="result" element="tns:updateDeviceCredentialsv2Response" />
+  </message>
+  <message name="setSimCredentials">
+    <part name="parameters" element="tns:setSimCredentials" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="setSimCredentialsResponse">
+    <part name="result" element="tns:setSimCredentialsResponse" />
+  </message>
+  <message name="updateSimCredentials">
+    <part name="parameters" element="tns:updateSimCredentials" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="updateSimCredentialsResponse">
+    <part name="result" element="tns:updateSimCredentialsResponse" />
+  </message>
+  <message name="getBaseCountryList">
+    <part name="parameters" element="tns:getBaseCountryList" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getBaseCountryListResponse">
+    <part name="result" element="tns:getBaseCountryListResponse" />
+  </message>
+  <message name="getCustomerDetails">
+    <part name="parameters" element="tns:getCustomerDetails" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getCustomerDetailsResponse">
+    <part name="result" element="tns:getCustomerDetailsResponse" />
+  </message>
+  <message name="getContactDetails">
+    <part name="parameters" element="tns:getContactDetails" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getContactDetailsResponse">
+    <part name="result" element="tns:getContactDetailsResponse" />
+  </message>
+  <message name="setContactDetails">
+    <part name="parameters" element="tns:setContactDetails" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="setContactDetailsResponse">
+    <part name="result" element="tns:setContactDetailsResponse" />
+  </message>
+  <message name="getCustomerServiceProfileDetails">
+    <part name="parameters" element="tns:getCustomerServiceProfileDetails" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getCustomerServiceProfileDetailsResponse">
+    <part name="result" element="tns:getCustomerServiceProfileDetailsResponse" />
+  </message>
+  <message name="getCustomerServiceProfileDetailsv2">
+    <part name="parameters" element="tns:getCustomerServiceProfileDetailsv2" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getCustomerServiceProfileDetailsv2Response">
+    <part name="result" element="tns:getCustomerServiceProfileDetailsv2Response" />
+  </message>
+  <message name="getCustomerServiceProfileDetailsv3">
+    <part name="parameters" element="tns:getCustomerServiceProfileDetailsv3" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getCustomerServiceProfileDetailsv3Response">
+    <part name="result" element="tns:getCustomerServiceProfileDetailsv3Response" />
+  </message>
+  <message name="getCustomerServiceProfileList">
+    <part name="parameters" element="tns:getCustomerServiceProfileList" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getCustomerServiceProfileListResponse">
+    <part name="result" element="tns:getCustomerServiceProfileListResponse" />
+  </message>
+  <message name="getCustomerSimOrderList">
+    <part name="parameters" element="tns:getCustomerSimOrderList" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getCustomerSimOrderListResponse">
+    <part name="result" element="tns:getCustomerSimOrderListResponse" />
+  </message>
+  <message name="getDeviceDetails">
+    <part name="parameters" element="tns:getDeviceDetails" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getDeviceDetailsResponse">
+    <part name="result" element="tns:getDeviceDetailsResponse" />
+  </message>
+  <message name="getDeviceDetailsv2">
+    <part name="parameters" element="tns:getDeviceDetailsv2" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getDeviceDetailsv2Response">
+    <part name="result" element="tns:getDeviceDetailsv2Response" />
+  </message>
+  <message name="getSimDetails">
+    <part name="parameters" element="tns:getSimDetails" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getSimDetailsResponse">
+    <part name="result" element="tns:getSimDetailsResponse" />
+  </message>
+  <message name="getSimDetailsv2">
+    <part name="parameters" element="tns:getSimDetailsv2" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getSimDetailsv2Response">
+    <part name="result" element="tns:getSimDetailsv2Response" />
+  </message>
+  <message name="getDeviceRegistrationDetails">
+    <part name="parameters" element="tns:getDeviceRegistrationDetails" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getDeviceRegistrationDetailsResponse">
+    <part name="result" element="tns:getDeviceRegistrationDetailsResponse" />
+  </message>
+  <message name="getSimRegistrationDetails">
+    <part name="parameters" element="tns:getSimRegistrationDetails" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getSimRegistrationDetailsResponse">
+    <part name="result" element="tns:getSimRegistrationDetailsResponse" />
+  </message>
+  <message name="getDeviceHistory">
+    <part name="parameters" element="tns:getDeviceHistory" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getDeviceHistoryResponse">
+    <part name="result" element="tns:getDeviceHistoryResponse" />
+  </message>
+  <message name="getSimHistory">
+    <part name="parameters" element="tns:getSimHistory" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getSimHistoryResponse">
+    <part name="result" element="tns:getSimHistoryResponse" />
+  </message>
+  <message name="getSimHistoryv2">
+    <part name="parameters" element="tns:getSimHistoryv2" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getSimHistoryv2Response">
+    <part name="result" element="tns:getSimHistoryv2Response" />
+  </message>
+  <message name="getSimHistoryv3">
+    <part name="parameters" element="tns:getSimHistoryv3" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getSimHistoryv3Response">
+    <part name="result" element="tns:getSimHistoryv3Response" />
+  </message>
+  <message name="getDeviceStateList">
+    <part name="parameters" element="tns:getDeviceStateList" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getDeviceStateListResponse">
+    <part name="result" element="tns:getDeviceStateListResponse" />
+  </message>
+  <message name="getFilteredDeviceList">
+    <part name="parameters" element="tns:getFilteredDeviceList" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getFilteredDeviceListResponse">
+    <part name="result" element="tns:getFilteredDeviceListResponse" />
+  </message>
+  <message name="getFilteredDeviceListv2">
+    <part name="parameters" element="tns:getFilteredDeviceListv2" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getFilteredDeviceListv2Response">
+    <part name="result" element="tns:getFilteredDeviceListv2Response" />
+  </message>
+  <message name="getFilteredDeviceListv3">
+    <part name="parameters" element="tns:getFilteredDeviceListv3" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getFilteredDeviceListv3Response">
+    <part name="result" element="tns:getFilteredDeviceListv3Response" />
+  </message>
+  <message name="getFilteredDeviceListv4">
+    <part name="parameters" element="tns:getFilteredDeviceListv4" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getFilteredDeviceListv4Response">
+    <part name="result" element="tns:getFilteredDeviceListv4Response" />
+  </message>
+  <message name="getFilteredSimList">
+    <part name="parameters" element="tns:getFilteredSimList" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getFilteredSimListResponse">
+    <part name="result" element="tns:getFilteredSimListResponse" />
+  </message>
+  <message name="getProvisioningProfileList">
+    <part name="parameters" element="tns:getProvisioningProfileList" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getProvisioningProfileListResponse">
+    <part name="result" element="tns:getProvisioningProfileListResponse" />
+  </message>
+  <message name="getReportDetails">
+    <part name="parameters" element="tns:getReportDetails" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getReportDetailsResponse">
+    <part name="result" element="tns:getReportDetailsResponse" />
+  </message>
+  <message name="getReportList">
+    <part name="parameters" element="tns:getReportList" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getReportListResponse">
+    <part name="result" element="tns:getReportListResponse" />
+  </message>
+  <message name="getReport">
+    <part name="parameters" element="tns:getReport" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getReportResponse">
+    <part name="result" element="tns:getReportResponse" />
+  </message>
+  <message name="getTariffList">
+    <part name="parameters" element="tns:getTariffList" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getTariffListResponse">
+    <part name="result" element="tns:getTariffListResponse" />
+  </message>
+  <message name="getTransactionList">
+    <part name="parameters" element="tns:getTransactionList" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getTransactionListResponse">
+    <part name="result" element="tns:getTransactionListResponse" />
+  </message>
+  <message name="getTransactionListv2">
+    <part name="parameters" element="tns:getTransactionListv2" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getTransactionListv2Response">
+    <part name="result" element="tns:getTransactionListv2Response" />
+  </message>
+  <message name="getUserDetails">
+    <part name="parameters" element="tns:getUserDetails" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getUserDetailsResponse">
+    <part name="result" element="tns:getUserDetailsResponse" />
+  </message>
+  <message name="getUserList">
+    <part name="parameters" element="tns:getUserList" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getUserListResponse">
+    <part name="result" element="tns:getUserListResponse" />
+  </message>
+  <message name="submitSMS">
+    <part name="parameters" element="tns:submitSMS" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="submitSMSResponse">
+    <part name="result" element="tns:submitSMSResponse" />
+  </message>
+  <message name="submitSMSv2">
+    <part name="parameters" element="tns:submitSMSv2" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="submitSMSv2Response">
+    <part name="result" element="tns:submitSMSv2Response" />
+  </message>
+  <message name="submitSMSv3">
+    <part name="parameters" element="tns:submitSMSv3" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="submitSMSv3Response">
+    <part name="result" element="tns:submitSMSv3Response" />
+  </message>
+  <message name="submitSimSMS">
+    <part name="parameters" element="tns:submitSimSMS" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="submitSimSMSResponse">
+    <part name="result" element="tns:submitSimSMSResponse" />
+  </message>
+  <message name="submitTransactionalSMS">
+    <part name="parameters" element="tns:submitTransactionalSMS" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="submitTransactionalSMSResponse">
+    <part name="result" element="tns:submitTransactionalSMSResponse" />
+  </message>
+  <message name="submitSimTransactionalSMS">
+    <part name="parameters" element="tns:submitSimTransactionalSMS" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="submitSimTransactionalSMSResponse">
+    <part name="result" element="tns:submitSimTransactionalSMSResponse" />
+  </message>
+  <message name="getSmsCommunicationOverview">
+    <part name="parameters" element="tns:getSmsCommunicationOverview" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getSmsCommunicationOverviewResponse">
+    <part name="result" element="tns:getSmsCommunicationOverviewResponse" />
+  </message>
+  <message name="getSmsCommunicationOverviewv2">
+    <part name="parameters" element="tns:getSmsCommunicationOverviewv2" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getSmsCommunicationOverviewv2Response">
+    <part name="result" element="tns:getSmsCommunicationOverviewv2Response" />
+  </message>
+  <message name="getSimSmsCommunicationOverview">
+    <part name="parameters" element="tns:getSimSmsCommunicationOverview" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getSimSmsCommunicationOverviewResponse">
+    <part name="result" element="tns:getSimSmsCommunicationOverviewResponse" />
+  </message>
+  <message name="setCustomerDetails">
+    <part name="parameters" element="tns:setCustomerDetails" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="setCustomerDetailsResponse">
+    <part name="result" element="tns:setCustomerDetailsResponse" />
+  </message>
+  <message name="getCustomerDetailsv2">
+    <part name="parameters" element="tns:getCustomerDetailsv2" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getCustomerDetailsv2Response">
+    <part name="result" element="tns:getCustomerDetailsv2Response" />
+  </message>
+  <message name="setCustomerDetailsv2">
+    <part name="parameters" element="tns:setCustomerDetailsv2" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="setCustomerDetailsv2Response">
+    <part name="result" element="tns:setCustomerDetailsv2Response" />
+  </message>
+  <message name="setCustomerServiceProfileDetails">
+    <part name="parameters" element="tns:setCustomerServiceProfileDetails" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="setCustomerServiceProfileDetailsResponse">
+    <part name="result" element="tns:setCustomerServiceProfileDetailsResponse" />
+  </message>
+  <message name="setCustomerServiceProfileDetailsv2">
+    <part name="parameters" element="tns:setCustomerServiceProfileDetailsv2" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="setCustomerServiceProfileDetailsv2Response">
+    <part name="result" element="tns:setCustomerServiceProfileDetailsv2Response" />
+  </message>
+  <message name="setCustomerServiceProfileDetailsv3">
+    <part name="parameters" element="tns:setCustomerServiceProfileDetailsv3" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="setCustomerServiceProfileDetailsv3Response">
+    <part name="result" element="tns:setCustomerServiceProfileDetailsv3Response" />
+  </message>
+  <message name="setCustomerServiceProfileDetailsv4">
+    <part name="parameters" element="tns:setCustomerServiceProfileDetailsv4" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="setCustomerServiceProfileDetailsv4Response">
+    <part name="result" element="tns:setCustomerServiceProfileDetailsv4Response" />
+  </message>
+  <message name="setDeviceDetails">
+    <part name="parameters" element="tns:setDeviceDetails" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="setDeviceDetailsResponse">
+    <part name="result" element="tns:setDeviceDetailsResponse" />
+  </message>
+  <message name="setDeviceDetailsv2">
+    <part name="parameters" element="tns:setDeviceDetailsv2" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="setDeviceDetailsv2Response">
+    <part name="result" element="tns:setDeviceDetailsv2Response" />
+  </message>
+  <message name="setDeviceDetailsv3">
+    <part name="parameters" element="tns:setDeviceDetailsv3" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="setDeviceDetailsv3Response">
+    <part name="result" element="tns:setDeviceDetailsv3Response" />
+  </message>
+  <message name="setDeviceDetailsv4">
+    <part name="parameters" element="tns:setDeviceDetailsv4" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="setDeviceDetailsv4Response">
+    <part name="result" element="tns:setDeviceDetailsv4Response" />
+  </message>
+  <message name="moveSIMToCustomer">
+    <part name="parameters" element="tns:moveSIMToCustomer" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="moveSIMToCustomerResponse">
+    <part name="result" element="tns:moveSIMToCustomerResponse" />
+  </message>
+  <message name="setSimDetails">
+    <part name="parameters" element="tns:setSimDetails" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="setSimDetailsResponse">
+    <part name="result" element="tns:setSimDetailsResponse" />
+  </message>
+  <message name="setUserDetails">
+    <part name="parameters" element="tns:setUserDetails" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="setUserDetailsResponse">
+    <part name="result" element="tns:setUserDetailsResponse" />
+  </message>
+  <message name="submitReportRequest">
+    <part name="parameters" element="tns:submitReportRequest" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="submitReportRequestResponse">
+    <part name="result" element="tns:submitReportRequestResponse" />
+  </message>
+  <message name="retrieveReport">
+    <part name="parameters" element="tns:retrieveReport" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="retrieveReportResponse">
+    <part name="result" element="tns:retrieveReportResponse" />
+  </message>
+  <message name="submitWUTrigger">
+    <part name="parameters" element="tns:submitWUTrigger" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="submitWUTriggerResponse">
+    <part name="result" element="tns:submitWUTriggerResponse" />
+  </message>
+  <message name="submitWUTriggerv2">
+    <part name="parameters" element="tns:submitWUTriggerv2" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="submitWUTriggerv2Response">
+    <part name="result" element="tns:submitWUTriggerv2Response" />
+  </message>
+  <message name="submitWUTriggerv3">
+    <part name="parameters" element="tns:submitWUTriggerv3" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="submitWUTriggerv3Response">
+    <part name="result" element="tns:submitWUTriggerv3Response" />
+  </message>
+  <message name="submitSimWUTrigger">
+    <part name="parameters" element="tns:submitSimWUTrigger" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="submitSimWUTriggerResponse">
+    <part name="result" element="tns:submitSimWUTriggerResponse" />
+  </message>
+  <message name="getVpnGroupList">
+    <part name="parameters" element="tns:getVpnGroupList" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getVpnGroupListResponse">
+    <part name="result" element="tns:getVpnGroupListResponse" />
+  </message>
+  <message name="getDeviceLocationHistoryDetails">
+    <part name="parameters" element="tns:getDeviceLocationHistoryDetails" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getDeviceLocationHistoryDetailsResponse">
+    <part name="result" element="tns:getDeviceLocationHistoryDetailsResponse" />
+  </message>
+  <message name="getSimLocationHistoryDetails">
+    <part name="parameters" element="tns:getSimLocationHistoryDetails" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getSimLocationHistoryDetailsResponse">
+    <part name="result" element="tns:getSimLocationHistoryDetailsResponse" />
+  </message>
+  <message name="getCustomerServiceProfileDetailsv4">
+    <part name="parameters" element="tns:getCustomerServiceProfileDetailsv4" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getCustomerServiceProfileDetailsv4Response">
+    <part name="result" element="tns:getCustomerServiceProfileDetailsv4Response" />
+  </message>
+  <message name="getCustomerServiceProfileDetailsv5">
+    <part name="parameters" element="tns:getCustomerServiceProfileDetailsv5" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getCustomerServiceProfileDetailsv5Response">
+    <part name="result" element="tns:getCustomerServiceProfileDetailsv5Response" />
+  </message>
+  <message name="setCustomerServiceProfileDetailsv5">
+    <part name="parameters" element="tns:setCustomerServiceProfileDetailsv5" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="setCustomerServiceProfileDetailsv5Response">
+    <part name="result" element="tns:setCustomerServiceProfileDetailsv5Response" />
+  </message>
+  <message name="cloneCustomerServiceProfilev5">
+    <part name="parameters" element="tns:cloneCustomerServiceProfilev5" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="cloneCustomerServiceProfilev5Response">
+    <part name="result" element="tns:cloneCustomerServiceProfilev5Response" />
+  </message>
+  <message name="getDeviceLocationDetails">
+    <part name="parameters" element="tns:getDeviceLocationDetails" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getDeviceLocationDetailsResponse">
+    <part name="result" element="tns:getDeviceLocationDetailsResponse" />
+  </message>
+  <message name="getSimLocationDetails">
+    <part name="parameters" element="tns:getSimLocationDetails" />
+    <part name="gdspHeader" element="tns:gdspHeader" />
+  </message>
+  <message name="getSimLocationDetailsResponse">
+    <part name="result" element="tns:getSimLocationDetailsResponse" />
+  </message>
+  <portType name="CloneCustomerServiceProfile">
+    <operation name="cloneCustomerServiceProfile" parameterOrder="parameters gdspHeader">
+      <input message="tns:cloneCustomerServiceProfile" />
+      <output message="tns:cloneCustomerServiceProfileResponse" />
+    </operation>
+  </portType>
+  <portType name="CloneCustomerServiceProfilev2">
+    <operation name="cloneCustomerServiceProfilev2" parameterOrder="parameters gdspHeader">
+      <input message="tns:cloneCustomerServiceProfilev2" />
+      <output message="tns:cloneCustomerServiceProfilev2Response" />
+    </operation>
+  </portType>
+  <portType name="CloneCustomerServiceProfilev3">
+    <operation name="cloneCustomerServiceProfilev3" parameterOrder="parameters gdspHeader">
+      <input message="tns:cloneCustomerServiceProfilev3" />
+      <output message="tns:cloneCustomerServiceProfilev3Response" />
+    </operation>
+  </portType>
+  <portType name="CloneCustomerServiceProfilev4">
+    <operation name="cloneCustomerServiceProfilev4" parameterOrder="parameters gdspHeader">
+      <input message="tns:cloneCustomerServiceProfilev4" />
+      <output message="tns:cloneCustomerServiceProfilev4Response" />
+    </operation>
+  </portType>
+  <portType name="CreateUser">
+    <operation name="createUser" parameterOrder="parameters gdspHeader">
+      <input message="tns:createUser" />
+      <output message="tns:createUserResponse" />
+    </operation>
+  </portType>
+  <portType name="DeviceCredentials">
+    <operation name="setDeviceCredentials" parameterOrder="parameters gdspHeader">
+      <input message="tns:setDeviceCredentials" />
+      <output message="tns:setDeviceCredentialsResponse" />
+    </operation>
+    <operation name="updateDeviceCredentials" parameterOrder="parameters gdspHeader">
+      <input message="tns:updateDeviceCredentials" />
+      <output message="tns:updateDeviceCredentialsResponse" />
+    </operation>
+  </portType>
+  <portType name="DeviceCredentialsv2">
+    <operation name="setDeviceCredentialsv2" parameterOrder="parameters gdspHeader">
+      <input message="tns:setDeviceCredentialsv2" />
+      <output message="tns:setDeviceCredentialsv2Response" />
+    </operation>
+    <operation name="updateDeviceCredentialsv2" parameterOrder="parameters gdspHeader">
+      <input message="tns:updateDeviceCredentialsv2" />
+      <output message="tns:updateDeviceCredentialsv2Response" />
+    </operation>
+  </portType>
+  <portType name="SimCredentials">
+    <operation name="setSimCredentials" parameterOrder="parameters gdspHeader">
+      <input message="tns:setSimCredentials" />
+      <output message="tns:setSimCredentialsResponse" />
+    </operation>
+    <operation name="updateSimCredentials" parameterOrder="parameters gdspHeader">
+      <input message="tns:updateSimCredentials" />
+      <output message="tns:updateSimCredentialsResponse" />
+    </operation>
+  </portType>
+  <portType name="GetBaseCountryList">
+    <operation name="getBaseCountryList" parameterOrder="parameters gdspHeader">
+      <input message="tns:getBaseCountryList" />
+      <output message="tns:getBaseCountryListResponse" />
+    </operation>
+  </portType>
+  <portType name="GetCustomerDetails">
+    <operation name="getCustomerDetails" parameterOrder="parameters gdspHeader">
+      <input message="tns:getCustomerDetails" />
+      <output message="tns:getCustomerDetailsResponse" />
+    </operation>
+  </portType>
+  <portType name="GetContactDetails">
+    <operation name="getContactDetails" parameterOrder="parameters gdspHeader">
+      <input message="tns:getContactDetails" />
+      <output message="tns:getContactDetailsResponse" />
+    </operation>
+  </portType>
+  <portType name="SetContactDetails">
+    <operation name="setContactDetails" parameterOrder="parameters gdspHeader">
+      <input message="tns:setContactDetails" />
+      <output message="tns:setContactDetailsResponse" />
+    </operation>
+  </portType>
+  <portType name="GetCustomerServiceProfileDetails">
+    <operation name="getCustomerServiceProfileDetails" parameterOrder="parameters gdspHeader">
+      <input message="tns:getCustomerServiceProfileDetails" />
+      <output message="tns:getCustomerServiceProfileDetailsResponse" />
+    </operation>
+  </portType>
+  <portType name="GetCustomerServiceProfileDetailsv2">
+    <operation name="getCustomerServiceProfileDetailsv2" parameterOrder="parameters gdspHeader">
+      <input message="tns:getCustomerServiceProfileDetailsv2" />
+      <output message="tns:getCustomerServiceProfileDetailsv2Response" />
+    </operation>
+  </portType>
+  <portType name="GetCustomerServiceProfileDetailsv3">
+    <operation name="getCustomerServiceProfileDetailsv3" parameterOrder="parameters gdspHeader">
+      <input message="tns:getCustomerServiceProfileDetailsv3" />
+      <output message="tns:getCustomerServiceProfileDetailsv3Response" />
+    </operation>
+  </portType>
+  <portType name="GetCustomerServiceProfileList">
+    <operation name="getCustomerServiceProfileList" parameterOrder="parameters gdspHeader">
+      <input message="tns:getCustomerServiceProfileList" />
+      <output message="tns:getCustomerServiceProfileListResponse" />
+    </operation>
+  </portType>
+  <portType name="GetCustomerSimOrderList">
+    <operation name="getCustomerSimOrderList" parameterOrder="parameters gdspHeader">
+      <input message="tns:getCustomerSimOrderList" />
+      <output message="tns:getCustomerSimOrderListResponse" />
+    </operation>
+  </portType>
+  <portType name="GetDeviceDetails">
+    <operation name="getDeviceDetails" parameterOrder="parameters gdspHeader">
+      <input message="tns:getDeviceDetails" />
+      <output message="tns:getDeviceDetailsResponse" />
+    </operation>
+  </portType>
+  <portType name="GetDeviceDetailsv2">
+    <operation name="getDeviceDetailsv2" parameterOrder="parameters gdspHeader">
+      <input message="tns:getDeviceDetailsv2" />
+      <output message="tns:getDeviceDetailsv2Response" />
+    </operation>
+  </portType>
+  <portType name="GetSimDetails">
+    <operation name="getSimDetails" parameterOrder="parameters gdspHeader">
+      <input message="tns:getSimDetails" />
+      <output message="tns:getSimDetailsResponse" />
+    </operation>
+  </portType>
+  <portType name="GetSimDetailsv2">
+    <operation name="getSimDetailsv2" parameterOrder="parameters gdspHeader">
+      <input message="tns:getSimDetailsv2" />
+      <output message="tns:getSimDetailsv2Response" />
+    </operation>
+  </portType>
+  <portType name="GetDeviceRegistrationDetails">
+    <operation name="getDeviceRegistrationDetails" parameterOrder="parameters gdspHeader">
+      <input message="tns:getDeviceRegistrationDetails" />
+      <output message="tns:getDeviceRegistrationDetailsResponse" />
+    </operation>
+  </portType>
+  <portType name="GetSimRegistrationDetails">
+    <operation name="getSimRegistrationDetails" parameterOrder="parameters gdspHeader">
+      <input message="tns:getSimRegistrationDetails" />
+      <output message="tns:getSimRegistrationDetailsResponse" />
+    </operation>
+  </portType>
+  <portType name="GetDeviceHistory">
+    <operation name="getDeviceHistory" parameterOrder="parameters gdspHeader">
+      <input message="tns:getDeviceHistory" />
+      <output message="tns:getDeviceHistoryResponse" />
+    </operation>
+  </portType>
+  <portType name="GetSimHistory">
+    <operation name="getSimHistory" parameterOrder="parameters gdspHeader">
+      <input message="tns:getSimHistory" />
+      <output message="tns:getSimHistoryResponse" />
+    </operation>
+  </portType>
+  <portType name="GetSimHistoryv2">
+    <operation name="getSimHistoryv2" parameterOrder="parameters gdspHeader">
+      <input message="tns:getSimHistoryv2" />
+      <output message="tns:getSimHistoryv2Response" />
+    </operation>
+  </portType>
+  <portType name="GetSimHistoryv3">
+    <operation name="getSimHistoryv3" parameterOrder="parameters gdspHeader">
+      <input message="tns:getSimHistoryv3" />
+      <output message="tns:getSimHistoryv3Response" />
+    </operation>
+  </portType>
+  <portType name="GetDeviceStateList">
+    <operation name="getDeviceStateList" parameterOrder="parameters gdspHeader">
+      <input message="tns:getDeviceStateList" />
+      <output message="tns:getDeviceStateListResponse" />
+    </operation>
+  </portType>
+  <portType name="GetFilteredDeviceList">
+    <operation name="getFilteredDeviceList" parameterOrder="parameters gdspHeader">
+      <input message="tns:getFilteredDeviceList" />
+      <output message="tns:getFilteredDeviceListResponse" />
+    </operation>
+  </portType>
+  <portType name="GetFilteredDeviceListv2">
+    <operation name="getFilteredDeviceListv2" parameterOrder="parameters gdspHeader">
+      <input message="tns:getFilteredDeviceListv2" />
+      <output message="tns:getFilteredDeviceListv2Response" />
+    </operation>
+  </portType>
+  <portType name="GetFilteredDeviceListv3">
+    <operation name="getFilteredDeviceListv3" parameterOrder="parameters gdspHeader">
+      <input message="tns:getFilteredDeviceListv3" />
+      <output message="tns:getFilteredDeviceListv3Response" />
+    </operation>
+  </portType>
+  <portType name="GetFilteredDeviceListv4">
+    <operation name="getFilteredDeviceListv4" parameterOrder="parameters gdspHeader">
+      <input message="tns:getFilteredDeviceListv4" />
+      <output message="tns:getFilteredDeviceListv4Response" />
+    </operation>
+  </portType>
+  <portType name="getFilteredSimList">
+    <operation name="getFilteredSimList" parameterOrder="parameters gdspHeader">
+      <input message="tns:getFilteredSimList" />
+      <output message="tns:getFilteredSimListResponse" />
+    </operation>
+  </portType>
+  <portType name="GetProvisioningProfileList">
+    <operation name="getProvisioningProfileList" parameterOrder="parameters gdspHeader">
+      <input message="tns:getProvisioningProfileList" />
+      <output message="tns:getProvisioningProfileListResponse" />
+    </operation>
+  </portType>
+  <portType name="GetReportDetails">
+    <operation name="getReportDetails" parameterOrder="parameters gdspHeader">
+      <input message="tns:getReportDetails" />
+      <output message="tns:getReportDetailsResponse" />
+    </operation>
+  </portType>
+  <portType name="GetReportList">
+    <operation name="getReportList" parameterOrder="parameters gdspHeader">
+      <input message="tns:getReportList" />
+      <output message="tns:getReportListResponse" />
+    </operation>
+  </portType>
+  <portType name="GetReport">
+    <operation name="getReport" parameterOrder="parameters gdspHeader">
+      <input message="tns:getReport" />
+      <output message="tns:getReportResponse" />
+    </operation>
+  </portType>
+  <portType name="GetTariffList">
+    <operation name="getTariffList" parameterOrder="parameters gdspHeader">
+      <input message="tns:getTariffList" />
+      <output message="tns:getTariffListResponse" />
+    </operation>
+  </portType>
+  <portType name="GetTransactionList">
+    <operation name="getTransactionList" parameterOrder="parameters gdspHeader">
+      <input message="tns:getTransactionList" />
+      <output message="tns:getTransactionListResponse" />
+    </operation>
+  </portType>
+  <portType name="GetTransactionListv2">
+    <operation name="getTransactionListv2" parameterOrder="parameters gdspHeader">
+      <input message="tns:getTransactionListv2" />
+      <output message="tns:getTransactionListv2Response" />
+    </operation>
+  </portType>
+  <portType name="GetUserDetails">
+    <operation name="getUserDetails" parameterOrder="parameters gdspHeader">
+      <input message="tns:getUserDetails" />
+      <output message="tns:getUserDetailsResponse" />
+    </operation>
+  </portType>
+  <portType name="GetUserList">
+    <operation name="getUserList" parameterOrder="parameters gdspHeader">
+      <input message="tns:getUserList" />
+      <output message="tns:getUserListResponse" />
+    </operation>
+  </portType>
+  <portType name="SMS">
+    <operation name="SubmitSMS" parameterOrder="parameters gdspHeader">
+      <input message="tns:submitSMS" />
+      <output message="tns:submitSMSResponse" />
+    </operation>
+  </portType>
+  <portType name="SMSv2">
+    <operation name="SubmitSMSv2" parameterOrder="parameters gdspHeader">
+      <input message="tns:submitSMSv2" />
+      <output message="tns:submitSMSv2Response" />
+    </operation>
+  </portType>
+  <portType name="SMSv3">
+    <operation name="SubmitSMSv3" parameterOrder="parameters gdspHeader">
+      <input message="tns:submitSMSv3" />
+      <output message="tns:submitSMSv3Response" />
+    </operation>
+  </portType>
+  <portType name="SimSMS">
+    <operation name="SubmitSimSMS" parameterOrder="parameters gdspHeader">
+      <input message="tns:submitSimSMS" />
+      <output message="tns:submitSimSMSResponse" />
+    </operation>
+  </portType>
+  <portType name="TransactionalSMS">
+    <operation name="SubmitTransactionalSMS" parameterOrder="parameters gdspHeader">
+      <input message="tns:submitTransactionalSMS" />
+      <output message="tns:submitTransactionalSMSResponse" />
+    </operation>
+  </portType>
+  <portType name="SimTransactionalSMS">
+    <operation name="SubmitSimTransactionalSMS" parameterOrder="parameters gdspHeader">
+      <input message="tns:submitSimTransactionalSMS" />
+      <output message="tns:submitSimTransactionalSMSResponse" />
+    </operation>
+  </portType>
+  <portType name="GetSmsCommunicationOverviewPort">
+    <operation name="getSmsCommunicationOverview" parameterOrder="parameters gdspHeader">
+      <input message="tns:getSmsCommunicationOverview" />
+      <output message="tns:getSmsCommunicationOverviewResponse" />
+    </operation>
+  </portType>
+  <portType name="GetSmsCommunicationOverviewv2Port">
+    <operation name="getSmsCommunicationOverviewv2" parameterOrder="parameters gdspHeader">
+      <input message="tns:getSmsCommunicationOverviewv2" />
+      <output message="tns:getSmsCommunicationOverviewv2Response" />
+    </operation>
+  </portType>
+  <portType name="GetSimSmsCommunicationOverviewPort">
+    <operation name="getSimSmsCommunicationOverview" parameterOrder="parameters gdspHeader">
+      <input message="tns:getSimSmsCommunicationOverview" />
+      <output message="tns:getSimSmsCommunicationOverviewResponse" />
+    </operation>
+  </portType>
+  <portType name="SetCustomerDetails">
+    <operation name="setCustomerDetails" parameterOrder="parameters gdspHeader">
+      <input message="tns:setCustomerDetails" />
+      <output message="tns:setCustomerDetailsResponse" />
+    </operation>
+  </portType>
+  <portType name="GetCustomerDetailsv2">
+    <operation name="getCustomerDetailsv2" parameterOrder="parameters gdspHeader">
+      <input message="tns:getCustomerDetailsv2" />
+      <output message="tns:getCustomerDetailsv2Response" />
+    </operation>
+  </portType>
+  <portType name="SetCustomerDetailsv2">
+    <operation name="setCustomerDetailsv2" parameterOrder="parameters gdspHeader">
+      <input message="tns:setCustomerDetailsv2" />
+      <output message="tns:setCustomerDetailsv2Response" />
+    </operation>
+  </portType>
+  <portType name="SetCustomerServiceProfileDetails">
+    <operation name="setCustomerServiceProfileDetails" parameterOrder="parameters gdspHeader">
+      <input message="tns:setCustomerServiceProfileDetails" />
+      <output message="tns:setCustomerServiceProfileDetailsResponse" />
+    </operation>
+  </portType>
+  <portType name="SetCustomerServiceProfileDetailsv2">
+    <operation name="setCustomerServiceProfileDetailsv2" parameterOrder="parameters gdspHeader">
+      <input message="tns:setCustomerServiceProfileDetailsv2" />
+      <output message="tns:setCustomerServiceProfileDetailsv2Response" />
+    </operation>
+  </portType>
+  <portType name="SetCustomerServiceProfileDetailsv3">
+    <operation name="setCustomerServiceProfileDetailsv3" parameterOrder="parameters gdspHeader">
+      <input message="tns:setCustomerServiceProfileDetailsv3" />
+      <output message="tns:setCustomerServiceProfileDetailsv3Response" />
+    </operation>
+  </portType>
+  <portType name="SetCustomerServiceProfileDetailsv4">
+    <operation name="setCustomerServiceProfileDetailsv4" parameterOrder="parameters gdspHeader">
+      <input message="tns:setCustomerServiceProfileDetailsv4" />
+      <output message="tns:setCustomerServiceProfileDetailsv4Response" />
+    </operation>
+  </portType>
+  <portType name="SetDeviceDetails">
+    <operation name="setDeviceDetails" parameterOrder="parameters gdspHeader">
+      <input message="tns:setDeviceDetails" />
+      <output message="tns:setDeviceDetailsResponse" />
+    </operation>
+  </portType>
+  <portType name="SetDeviceDetailsv2">
+    <operation name="setDeviceDetailsv2" parameterOrder="parameters gdspHeader">
+      <input message="tns:setDeviceDetailsv2" />
+      <output message="tns:setDeviceDetailsv2Response" />
+    </operation>
+  </portType>
+  <portType name="SetDeviceDetailsv3">
+    <operation name="setDeviceDetailsv3" parameterOrder="parameters gdspHeader">
+      <input message="tns:setDeviceDetailsv3" />
+      <output message="tns:setDeviceDetailsv3Response" />
+    </operation>
+  </portType>
+  <portType name="SetDeviceDetailsv4">
+    <operation name="setDeviceDetailsv4" parameterOrder="parameters gdspHeader">
+      <input message="tns:setDeviceDetailsv4" />
+      <output message="tns:setDeviceDetailsv4Response" />
+    </operation>
+  </portType>
+  <portType name="MoveSIMToCustomer">
+    <operation name="moveSIMToCustomer" parameterOrder="parameters gdspHeader">
+      <input message="tns:moveSIMToCustomer" />
+      <output message="tns:moveSIMToCustomerResponse" />
+    </operation>
+  </portType>
+  <portType name="SetSimDetails">
+    <operation name="setSimDetails" parameterOrder="parameters gdspHeader">
+      <input message="tns:setSimDetails" />
+      <output message="tns:setSimDetailsResponse" />
+    </operation>
+  </portType>
+  <portType name="SetUserDetails">
+    <operation name="setUserDetails" parameterOrder="parameters gdspHeader">
+      <input message="tns:setUserDetails" />
+      <output message="tns:setUserDetailsResponse" />
+    </operation>
+  </portType>
+  <portType name="SubmitReportRequest">
+    <operation name="submitReportRequest" parameterOrder="parameters gdspHeader">
+      <input message="tns:submitReportRequest" />
+      <output message="tns:submitReportRequestResponse" />
+    </operation>
+  </portType>
+  <portType name="RetrieveReport">
+    <operation name="retrieveReport" parameterOrder="parameters gdspHeader">
+      <input message="tns:retrieveReport" />
+      <output message="tns:retrieveReportResponse" />
+    </operation>
+  </portType>
+  <portType name="SubmitWUTrigger">
+    <operation name="submitWUTrigger" parameterOrder="parameters gdspHeader">
+      <input message="tns:submitWUTrigger" />
+      <output message="tns:submitWUTriggerResponse" />
+    </operation>
+  </portType>
+  <portType name="SubmitWUTriggerv2">
+    <operation name="submitWUTriggerv2" parameterOrder="parameters gdspHeader">
+      <input message="tns:submitWUTriggerv2" />
+      <output message="tns:submitWUTriggerv2Response" />
+    </operation>
+  </portType>
+  <portType name="SubmitWUTriggerv3">
+    <operation name="submitWUTriggerv3" parameterOrder="parameters gdspHeader">
+      <input message="tns:submitWUTriggerv3" />
+      <output message="tns:submitWUTriggerv3Response" />
+    </operation>
+  </portType>
+  <portType name="SubmitSimWUTrigger">
+    <operation name="submitSimWUTrigger" parameterOrder="parameters gdspHeader">
+      <input message="tns:submitSimWUTrigger" />
+      <output message="tns:submitSimWUTriggerResponse" />
+    </operation>
+  </portType>
+  <portType name="GetVpnGroupList">
+    <operation name="getVpnGroupList" parameterOrder="parameters gdspHeader">
+      <input message="tns:getVpnGroupList" />
+      <output message="tns:getVpnGroupListResponse" />
+    </operation>
+  </portType>
+  <portType name="GetDeviceLocationHistoryDetails">
+    <operation name="getDeviceLocationHistoryDetails" parameterOrder="parameters gdspHeader">
+      <input message="tns:getDeviceLocationHistoryDetails" />
+      <output message="tns:getDeviceLocationHistoryDetailsResponse" />
+    </operation>
+  </portType>
+  <portType name="GetSimLocationHistoryDetails">
+    <operation name="getSimLocationHistoryDetails" parameterOrder="parameters gdspHeader">
+      <input message="tns:getSimLocationHistoryDetails" />
+      <output message="tns:getSimLocationHistoryDetailsResponse" />
+    </operation>
+  </portType>
+  <portType name="GetCustomerServiceProfileDetailsv4">
+    <operation name="getCustomerServiceProfileDetailsv4" parameterOrder="parameters gdspHeader">
+      <input message="tns:getCustomerServiceProfileDetailsv4" />
+      <output message="tns:getCustomerServiceProfileDetailsv4Response" />
+    </operation>
+  </portType>
+  <portType name="GetCustomerServiceProfileDetailsv5">
+    <operation name="getCustomerServiceProfileDetailsv5" parameterOrder="parameters gdspHeader">
+      <input message="tns:getCustomerServiceProfileDetailsv5" />
+      <output message="tns:getCustomerServiceProfileDetailsv5Response" />
+    </operation>
+  </portType>
+  <portType name="SetCustomerServiceProfileDetailsv5">
+    <operation name="setCustomerServiceProfileDetailsv5" parameterOrder="parameters gdspHeader">
+      <input message="tns:setCustomerServiceProfileDetailsv5" />
+      <output message="tns:setCustomerServiceProfileDetailsv5Response" />
+    </operation>
+  </portType>
+  <portType name="CloneCustomerServiceProfilev5">
+    <operation name="cloneCustomerServiceProfilev5" parameterOrder="parameters gdspHeader">
+      <input message="tns:cloneCustomerServiceProfilev5" />
+      <output message="tns:cloneCustomerServiceProfilev5Response" />
+    </operation>
+  </portType>
+  <portType name="GetDeviceLocationDetails">
+    <operation name="getDeviceLocationDetails" parameterOrder="parameters gdspHeader">
+      <input message="tns:getDeviceLocationDetails" />
+      <output message="tns:getDeviceLocationDetailsResponse" />
+    </operation>
+  </portType>
+  <portType name="getSimLocationDetails">
+    <operation name="getSimLocationDetails" parameterOrder="parameters gdspHeader">
+      <input message="tns:getSimLocationDetails" />
+      <output message="tns:getSimLocationDetailsResponse" />
+    </operation>
+  </portType>
+  <binding name="CloneCustomerServiceProfilePortBinding" type="tns:CloneCustomerServiceProfile">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="cloneCustomerServiceProfile">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:cloneCustomerServiceProfile" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="CloneCustomerServiceProfilev2PortBinding" type="tns:CloneCustomerServiceProfilev2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="cloneCustomerServiceProfilev2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:cloneCustomerServiceProfilev2" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="CloneCustomerServiceProfilev3PortBinding" type="tns:CloneCustomerServiceProfilev3">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="cloneCustomerServiceProfilev3">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:cloneCustomerServiceProfilev3" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="CloneCustomerServiceProfilev4PortBinding" type="tns:CloneCustomerServiceProfilev4">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="cloneCustomerServiceProfilev4">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:cloneCustomerServiceProfilev4" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="CreateUserPortBinding" type="tns:CreateUser">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="createUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:createUser" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="DeviceCredentialsPortBinding" type="tns:DeviceCredentials">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="setDeviceCredentials">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:setDeviceCredentials" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateDeviceCredentials">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:updateDeviceCredentials" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="DeviceCredentialsv2PortBinding" type="tns:DeviceCredentialsv2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="setDeviceCredentialsv2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:setDeviceCredentialsv2" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateDeviceCredentialsv2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:updateDeviceCredentialsv2" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SimCredentialsPortBinding" type="tns:SimCredentials">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="setSimCredentials">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:setSimCredentials" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateSimCredentials">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:updateSimCredentials" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetBaseCountryListPortBinding" type="tns:GetBaseCountryList">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getBaseCountryList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getBaseCountryList" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetCustomerDetailsPortBinding" type="tns:GetCustomerDetails">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getCustomerDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getCustomerDetails" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetContactDetailsPortBinding" type="tns:GetContactDetails">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getContactDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getContactDetails" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SetContactDetailsPortBinding" type="tns:SetContactDetails">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="setContactDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:setContactDetails" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetCustomerServiceProfileDetailsPortBinding" type="tns:GetCustomerServiceProfileDetails">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getCustomerServiceProfileDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getCustomerServiceProfileDetails" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetCustomerServiceProfileDetailsv2PortBinding" type="tns:GetCustomerServiceProfileDetailsv2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getCustomerServiceProfileDetailsv2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getCustomerServiceProfileDetailsv2" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetCustomerServiceProfileDetailsv3PortBinding" type="tns:GetCustomerServiceProfileDetailsv3">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getCustomerServiceProfileDetailsv3">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getCustomerServiceProfileDetailsv3" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetCustomerServiceProfileListPortBinding" type="tns:GetCustomerServiceProfileList">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getCustomerServiceProfileList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getCustomerServiceProfileList" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetCustomerSimOrderListPortBinding" type="tns:GetCustomerSimOrderList">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getCustomerSimOrderList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getCustomerSimOrderList" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetDeviceDetailsPortBinding" type="tns:GetDeviceDetails">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getDeviceDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getDeviceDetails" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetDeviceDetailsv2PortBinding" type="tns:GetDeviceDetailsv2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getDeviceDetailsv2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getDeviceDetailsv2" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetSimDetailsPortBinding" type="tns:GetSimDetails">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getSimDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getSimDetails" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetSimDetailsv2PortBinding" type="tns:GetSimDetailsv2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getSimDetailsv2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getSimDetailsv2" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetDeviceRegistrationDetailsPortBinding" type="tns:GetDeviceRegistrationDetails">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getDeviceRegistrationDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getDeviceRegistrationDetails" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetSimRegistrationDetailsPortBinding" type="tns:GetSimRegistrationDetails">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getSimRegistrationDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getSimRegistrationDetails" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetDeviceHistoryPortBinding" type="tns:GetDeviceHistory">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getDeviceHistory">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getDeviceHistory" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetSimHistoryPortBinding" type="tns:GetSimHistory">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getSimHistory">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getSimHistory" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetSimHistoryv2PortBinding" type="tns:GetSimHistoryv2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getSimHistoryv2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getSimHistoryv2" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetSimHistoryv3PortBinding" type="tns:GetSimHistoryv3">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getSimHistoryv3">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getSimHistoryv3" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetDeviceStateListPortBinding" type="tns:GetDeviceStateList">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getDeviceStateList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getDeviceStateList" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetFilteredDeviceListPortBinding" type="tns:GetFilteredDeviceList">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getFilteredDeviceList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getFilteredDeviceList" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetFilteredDeviceListv2PortBinding" type="tns:GetFilteredDeviceListv2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getFilteredDeviceListv2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getFilteredDeviceListv2" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetFilteredDeviceListv3PortBinding" type="tns:GetFilteredDeviceListv3">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getFilteredDeviceListv3">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getFilteredDeviceListv3" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetFilteredDeviceListv4PortBinding" type="tns:GetFilteredDeviceListv4">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getFilteredDeviceListv4">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getFilteredDeviceListv4" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="getFilteredSimListPortBinding" type="tns:getFilteredSimList">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getFilteredSimList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getFilteredSimList" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetProvisioningProfileListPortBinding" type="tns:GetProvisioningProfileList">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getProvisioningProfileList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getProvisioningProfileList" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetReportDetailsPortBinding" type="tns:GetReportDetails">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getReportDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getReportDetails" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetReportListPortBinding" type="tns:GetReportList">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getReportList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getReportList" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetReportPortBinding" type="tns:GetReport">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getReport">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getReport" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetTariffListPortBinding" type="tns:GetTariffList">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getTariffList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getTariffList" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetTransactionListPortBinding" type="tns:GetTransactionList">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getTransactionList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getTransactionList" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetTransactionListv2PortBinding" type="tns:GetTransactionListv2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getTransactionListv2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getTransactionListv2" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetUserDetailsPortBinding" type="tns:GetUserDetails">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getUserDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getUserDetails" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetUserListPortBinding" type="tns:GetUserList">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getUserList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getUserList" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SubmitSMSPortBinding" type="tns:SMS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="SubmitSMS">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:submitSMS" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SubmitSMSv2PortBinding" type="tns:SMSv2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="SubmitSMSv2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:submitSMSv2" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SubmitSMSv3PortBinding" type="tns:SMSv3">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="SubmitSMSv3">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:submitSMSv3" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SubmitSimSMSPortBinding" type="tns:SimSMS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="SubmitSimSMS">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:submitSimSMS" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SubmitTransactionalSMSPortBinding" type="tns:TransactionalSMS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="SubmitTransactionalSMS">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:submitTransactionalSMS" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SubmitSimTransactionalSMSPortBinding" type="tns:SimTransactionalSMS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="SubmitSimTransactionalSMS">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:submitSimTransactionalSMS" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetSmsCommunicationOverviewPortBinding" type="tns:GetSmsCommunicationOverviewPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getSmsCommunicationOverview">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getSmsCommunicationOverview" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetSmsCommunicationOverviewv2PortBinding" type="tns:GetSmsCommunicationOverviewv2Port">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getSmsCommunicationOverviewv2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getSmsCommunicationOverviewv2" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetSimSmsCommunicationOverviewPortBinding" type="tns:GetSimSmsCommunicationOverviewPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getSimSmsCommunicationOverview">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getSimSmsCommunicationOverview" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SetCustomerDetailsPortBinding" type="tns:SetCustomerDetails">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="setCustomerDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:setCustomerDetails" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetCustomerDetailsv2PortBinding" type="tns:GetCustomerDetailsv2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getCustomerDetailsv2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getCustomerDetailsv2" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SetCustomerDetailsv2PortBinding" type="tns:SetCustomerDetailsv2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="setCustomerDetailsv2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:setCustomerDetailsv2" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SetCustomerServiceProfileDetailsPortBinding" type="tns:SetCustomerServiceProfileDetails">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="setCustomerServiceProfileDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:setCustomerServiceProfileDetails" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SetCustomerServiceProfileDetailsv2PortBinding" type="tns:SetCustomerServiceProfileDetailsv2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="setCustomerServiceProfileDetailsv2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:setCustomerServiceProfileDetailsv2" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SetCustomerServiceProfileDetailsv3PortBinding" type="tns:SetCustomerServiceProfileDetailsv3">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="setCustomerServiceProfileDetailsv3">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:setCustomerServiceProfileDetailsv3" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SetCustomerServiceProfileDetailsv4PortBinding" type="tns:SetCustomerServiceProfileDetailsv4">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="setCustomerServiceProfileDetailsv4">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:setCustomerServiceProfileDetailsv4" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SetDeviceDetailsPortBinding" type="tns:SetDeviceDetails">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="setDeviceDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:setDeviceDetails" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SetDeviceDetailsv2PortBinding" type="tns:SetDeviceDetailsv2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="setDeviceDetailsv2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:setDeviceDetailsv2" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SetDeviceDetailsv3PortBinding" type="tns:SetDeviceDetailsv3">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="setDeviceDetailsv3">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:setDeviceDetailsv3" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SetDeviceDetailsv4PortBinding" type="tns:SetDeviceDetailsv4">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="setDeviceDetailsv4">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:setDeviceDetailsv4" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="MoveSIMToCustomerPortBinding" type="tns:MoveSIMToCustomer">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="moveSIMToCustomer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:moveSIMToCustomer" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SetSimDetailsPortBinding" type="tns:SetSimDetails">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="setSimDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:setSimDetails" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SetUserDetailsPortBinding" type="tns:SetUserDetails">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="setUserDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:setUserDetails" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SubmitReportRequestPortBinding" type="tns:SubmitReportRequest">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="submitReportRequest">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:submitReportRequest" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="RetrieveReportPortBinding" type="tns:RetrieveReport">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="retrieveReport">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:retrieveReport" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SubmitWUTriggerPortBinding" type="tns:SubmitWUTrigger">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="submitWUTrigger">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:submitWUTrigger" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SubmitWUTriggerv2PortBinding" type="tns:SubmitWUTriggerv2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="submitWUTriggerv2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:submitWUTriggerv2" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SubmitWUTriggerv3PortBinding" type="tns:SubmitWUTriggerv3">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="submitWUTriggerv3">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:submitWUTriggerv3" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SubmitSimWUTriggerPortBinding" type="tns:SubmitSimWUTrigger">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="submitSimWUTrigger">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:submitSimWUTrigger" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetVpnGroupListPortBinding" type="tns:GetVpnGroupList">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getVpnGroupList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getVpnGroupList" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetDeviceLocationHistoryDetailsPortBinding" type="tns:GetDeviceLocationHistoryDetails">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getDeviceLocationHistoryDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getDeviceLocationHistoryDetails" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetSimLocationHistoryDetailsPortBinding" type="tns:GetSimLocationHistoryDetails">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getSimLocationHistoryDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getSimLocationHistoryDetails" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetCustomerServiceProfileDetailsv4PortBinding" type="tns:GetCustomerServiceProfileDetailsv4">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getCustomerServiceProfileDetailsv4">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getCustomerServiceProfileDetailsv4" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetCustomerServiceProfileDetailsv5PortBinding" type="tns:GetCustomerServiceProfileDetailsv5">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getCustomerServiceProfileDetailsv5">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getCustomerServiceProfileDetailsv5" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SetCustomerServiceProfileDetailsv5PortBinding" type="tns:SetCustomerServiceProfileDetailsv5">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="setCustomerServiceProfileDetailsv5">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:setCustomerServiceProfileDetailsv5" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="CloneCustomerServiceProfilev5PortBinding" type="tns:CloneCustomerServiceProfilev5">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="cloneCustomerServiceProfilev5">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:cloneCustomerServiceProfilev5" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="GetDeviceLocationDetailsPortBinding" type="tns:GetDeviceLocationDetails">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getDeviceLocationDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getDeviceLocationDetails" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="getSimLocationDetailsPortBinding" type="tns:getSimLocationDetails">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getSimLocationDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:getSimLocationDetails" part="gdspHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CloneCustomerServiceProfileService">
+    <port name="CloneCustomerServiceProfilePort" binding="tns:CloneCustomerServiceProfilePortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/CloneCustomerServiceProfileService" />
+    </port>
+  </service>
+  <service name="CloneCustomerServiceProfilev2Service">
+    <port name="CloneCustomerServiceProfilev2Port" binding="tns:CloneCustomerServiceProfilev2PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/CloneCustomerServiceProfilev2Service" />
+    </port>
+  </service>
+  <service name="CloneCustomerServiceProfilev3Service">
+    <port name="CloneCustomerServiceProfilev3Port" binding="tns:CloneCustomerServiceProfilev3PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/CloneCustomerServiceProfilev3Service" />
+    </port>
+  </service>
+  <service name="CloneCustomerServiceProfilev4Service">
+    <port name="CloneCustomerServiceProfilev4Port" binding="tns:CloneCustomerServiceProfilev4PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/CloneCustomerServiceProfilev4Service" />
+    </port>
+  </service>
+  <service name="CreateUserService">
+    <port name="CreateUserPort" binding="tns:CreateUserPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/CreateUserService" />
+    </port>
+  </service>
+  <service name="DeviceCredentialsService">
+    <port name="DeviceCredentialsPort" binding="tns:DeviceCredentialsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/DeviceCredentialsService" />
+    </port>
+  </service>
+  <service name="DeviceCredentialsv2Service">
+    <port name="DeviceCredentialsv2Port" binding="tns:DeviceCredentialsv2PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/DeviceCredentialsv2Service" />
+    </port>
+  </service>
+  <service name="SimCredentialsService">
+    <port name="SimCredentialsPort" binding="tns:SimCredentialsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SimCredentialsService" />
+    </port>
+  </service>
+  <service name="GetBaseCountryListService">
+    <port name="GetBaseCountryListPort" binding="tns:GetBaseCountryListPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetBaseCountryListService" />
+    </port>
+  </service>
+  <service name="GetCustomerDetailsService">
+    <port name="GetCustomerDetailsPort" binding="tns:GetCustomerDetailsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetCustomerDetailsService" />
+    </port>
+  </service>
+  <service name="GetContactDetailsService">
+    <port name="GetContactDetailsPort" binding="tns:GetContactDetailsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetContactDetailsService" />
+    </port>
+  </service>
+  <service name="SetContactDetailsService">
+    <port name="SetContactDetailsPort" binding="tns:SetContactDetailsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SetContactDetailsService" />
+    </port>
+  </service>
+  <service name="GetCustomerServiceProfileDetails">
+    <port name="GetCustomerServiceProfileDetailsPort" binding="tns:GetCustomerServiceProfileDetailsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetCustomerServiceProfileDetailsService" />
+    </port>
+  </service>
+  <service name="GetCustomerServiceProfileDetailsv2">
+    <port name="GetCustomerServiceProfileDetailsv2Port" binding="tns:GetCustomerServiceProfileDetailsv2PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetCustomerServiceProfileDetailsv2Service" />
+    </port>
+  </service>
+  <service name="GetCustomerServiceProfileDetailsv3">
+    <port name="GetCustomerServiceProfileDetailsv3Port" binding="tns:GetCustomerServiceProfileDetailsv3PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetCustomerServiceProfileDetailsv3Service" />
+    </port>
+  </service>
+  <service name="GetCustomerServiceProfileListService">
+    <port name="GetCustomerServiceProfileListPort" binding="tns:GetCustomerServiceProfileListPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetCustomerServiceProfileListService" />
+    </port>
+  </service>
+  <service name="GetCustomerSimOrderListService">
+    <port name="GetCustomerSimOrderListPort" binding="tns:GetCustomerSimOrderListPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetCustomerSimOrderListService" />
+    </port>
+  </service>
+  <service name="GetDeviceDetailsService">
+    <port name="GetDeviceDetailsPort" binding="tns:GetDeviceDetailsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetDeviceDetailsService" />
+    </port>
+  </service>
+  <service name="GetDeviceDetailsv2Service">
+    <port name="GetDeviceDetailsv2Port" binding="tns:GetDeviceDetailsv2PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetDeviceDetailsv2Service" />
+    </port>
+  </service>
+  <service name="GetSimDetailsService">
+    <port name="GetSimDetailsPort" binding="tns:GetSimDetailsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetSimDetailsService" />
+    </port>
+  </service>
+  <service name="GetSimDetailsv2Service">
+    <port name="GetSimDetailsv2Port" binding="tns:GetSimDetailsv2PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetSimDetailsv2Service" />
+    </port>
+  </service>
+  <service name="GetDeviceRegistrationDetailsService">
+    <port name="GetDeviceRegistrationDetailsPort" binding="tns:GetDeviceRegistrationDetailsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetDeviceRegistrationDetailsService" />
+    </port>
+  </service>
+  <service name="GetSimRegistrationDetailsService">
+    <port name="GetSimRegistrationDetailsPort" binding="tns:GetSimRegistrationDetailsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetSimRegistrationDetailsService" />
+    </port>
+  </service>
+  <service name="GetDeviceHistoryService">
+    <port name="GetDeviceHistoryPort" binding="tns:GetDeviceHistoryPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetDeviceHistoryService" />
+    </port>
+  </service>
+  <service name="GetSimHistoryService">
+    <port name="GetSimHistoryPort" binding="tns:GetSimHistoryPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetSimHistoryService" />
+    </port>
+  </service>
+  <service name="GetSimHistoryv2Service">
+    <port name="GetSimHistoryv2Port" binding="tns:GetSimHistoryv2PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetSimHistoryv2Service" />
+    </port>
+  </service>
+  <service name="GetSimHistoryv3Service">
+    <port name="GetSimHistoryv3Port" binding="tns:GetSimHistoryv3PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetSimHistoryv3Service" />
+    </port>
+  </service>
+  <service name="GetDeviceStateListService">
+    <port name="GetDeviceStateListPort" binding="tns:GetDeviceStateListPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetDeviceStateListService" />
+    </port>
+  </service>
+  <service name="GetFilteredDeviceListService">
+    <port name="GetFilteredDeviceListPort" binding="tns:GetFilteredDeviceListPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetFilteredDeviceListService" />
+    </port>
+  </service>
+  <service name="GetFilteredDeviceListv2Service">
+    <port name="GetFilteredDeviceListv2Port" binding="tns:GetFilteredDeviceListv2PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetFilteredDeviceListv2Service" />
+    </port>
+  </service>
+  <service name="GetFilteredDeviceListv3Service">
+    <port name="GetFilteredDeviceListv3Port" binding="tns:GetFilteredDeviceListv3PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetFilteredDeviceListv3Service" />
+    </port>
+  </service>
+  <service name="GetFilteredDeviceListv4Service">
+    <port name="GetFilteredDeviceListv4Port" binding="tns:GetFilteredDeviceListv4PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetFilteredDeviceListv4Service" />
+    </port>
+  </service>
+  <service name="getFilteredSimListService">
+    <port name="getFilteredSimListPort" binding="tns:getFilteredSimListPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/getFilteredSimListService" />
+    </port>
+  </service>
+  <service name="GetProvisioningProfileListService">
+    <port name="GetProvisioningProfileListPort" binding="tns:GetProvisioningProfileListPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetProvisioningProfileListService" />
+    </port>
+  </service>
+  <service name="GetReportDetailsService">
+    <port name="GetReportDetailsPort" binding="tns:GetReportDetailsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetReportDetailsService" />
+    </port>
+  </service>
+  <service name="GetReportListService">
+    <port name="GetReportListPort" binding="tns:GetReportListPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetReportListService" />
+    </port>
+  </service>
+  <service name="GetReportService">
+    <port name="GetReportPort" binding="tns:GetReportPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetReportService" />
+    </port>
+  </service>
+  <service name="GetTariffListService">
+    <port name="GetTariffListPort" binding="tns:GetTariffListPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetTariffListService" />
+    </port>
+  </service>
+  <service name="GetTransactionListService">
+    <port name="GetTransactionListPort" binding="tns:GetTransactionListPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetTransactionListService" />
+    </port>
+  </service>
+  <service name="GetTransactionListv2Service">
+    <port name="GetTransactionListv2Port" binding="tns:GetTransactionListv2PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetTransactionListv2Service" />
+    </port>
+  </service>
+  <service name="GetUserDetailsService">
+    <port name="GetUserDetailsPort" binding="tns:GetUserDetailsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetUserDetailsService" />
+    </port>
+  </service>
+  <service name="GetUserListService">
+    <port name="GetUserListPort" binding="tns:GetUserListPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetUserListService" />
+    </port>
+  </service>
+  <service name="SubmitSMSService">
+    <port name="SubmitSMSPort" binding="tns:SubmitSMSPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SMSService" />
+    </port>
+  </service>
+  <service name="SubmitSMSv2Service">
+    <port name="SubmitSMSv2Port" binding="tns:SubmitSMSv2PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SMSv2Service" />
+    </port>
+  </service>
+  <service name="SubmitSMSv3Service">
+    <port name="SubmitSMSv3Port" binding="tns:SubmitSMSv3PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SMSv3Service" />
+    </port>
+  </service>
+  <service name="SubmitSimSMSService">
+    <port name="SubmitSimSMSPort" binding="tns:SubmitSimSMSPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SimSMSService" />
+    </port>
+  </service>
+  <service name="SubmitTransactionalSMSService">
+    <port name="SubmitTransactionalSMSPort" binding="tns:SubmitTransactionalSMSPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/TransactionalSMSService" />
+    </port>
+  </service>
+  <service name="SubmitSimTransactionalSMSService">
+    <port name="SubmitSimTransactionalSMSPort" binding="tns:SubmitSimTransactionalSMSPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SimTransactionalSMSService" />
+    </port>
+  </service>
+  <service name="GetSmsCommunicationOverviewService">
+    <port name="GetSmsCommunicationOverviewPort" binding="tns:GetSmsCommunicationOverviewPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetSmsCommunicationOverviewService" />
+    </port>
+  </service>
+  <service name="GetSmsCommunicationOverviewv2Service">
+    <port name="GetSmsCommunicationOverviewv2Port" binding="tns:GetSmsCommunicationOverviewv2PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetSmsCommunicationOverviewv2Service" />
+    </port>
+  </service>
+  <service name="GetSimSmsCommunicationOverviewService">
+    <port name="GetSimSmsCommunicationOverviewPort" binding="tns:GetSimSmsCommunicationOverviewPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetSimSmsCommunicationOverviewService" />
+    </port>
+  </service>
+  <service name="SetCustomerDetailsService">
+    <port name="SetCustomerDetailsPort" binding="tns:SetCustomerDetailsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SetCustomerDetailsService" />
+    </port>
+  </service>
+  <service name="GetCustomerDetailsv2Service">
+    <port name="GetCustomerDetailsv2Port" binding="tns:GetCustomerDetailsv2PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetCustomerDetailsv2Service" />
+    </port>
+  </service>
+  <service name="SetCustomerDetailsv2Service">
+    <port name="SetCustomerDetailsv2Port" binding="tns:SetCustomerDetailsv2PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SetCustomerDetailsv2Service" />
+    </port>
+  </service>
+  <service name="SetCustomerServiceProfileDetailsService">
+    <port name="SetCustomerServiceProfileDetailsPort" binding="tns:SetCustomerServiceProfileDetailsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SetCustomerServiceProfileDetailsService" />
+    </port>
+  </service>
+  <service name="SetCustomerServiceProfileDetailsv2Service">
+    <port name="SetCustomerServiceProfileDetailsv2Port" binding="tns:SetCustomerServiceProfileDetailsv2PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SetCustomerServiceProfileDetailsv2Service" />
+    </port>
+  </service>
+  <service name="SetCustomerServiceProfileDetailsv3Service">
+    <port name="SetCustomerServiceProfileDetailsv3Port" binding="tns:SetCustomerServiceProfileDetailsv3PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SetCustomerServiceProfileDetailsv3Service" />
+    </port>
+  </service>
+  <service name="SetCustomerServiceProfileDetailsv4Service">
+    <port name="SetCustomerServiceProfileDetailsv4Port" binding="tns:SetCustomerServiceProfileDetailsv4PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SetCustomerServiceProfileDetailsv4Service" />
+    </port>
+  </service>
+  <service name="SetDeviceDetailsService">
+    <port name="SetDeviceDetailsPort" binding="tns:SetDeviceDetailsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SetDeviceDetailsService" />
+    </port>
+  </service>
+  <service name="SetDeviceDetailsv2Service">
+    <port name="SetDeviceDetailsv2Port" binding="tns:SetDeviceDetailsv2PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SetDeviceDetailsv2Service" />
+    </port>
+  </service>
+  <service name="SetDeviceDetailsv3Service">
+    <port name="SetDeviceDetailsv3Port" binding="tns:SetDeviceDetailsv3PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SetDeviceDetailsv3Service" />
+    </port>
+  </service>
+  <service name="SetDeviceDetailsv4Service">
+    <port name="SetDeviceDetailsv4Port" binding="tns:SetDeviceDetailsv4PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SetDeviceDetailsv4Service" />
+    </port>
+  </service>
+  <service name="MoveSIMToCustomerService">
+    <port name="MoveSIMToCustomerPort" binding="tns:MoveSIMToCustomerPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/MoveSIMToCustomerService" />
+    </port>
+  </service>
+  <service name="SetSimDetailsService">
+    <port name="SetSimDetailsPort" binding="tns:SetSimDetailsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SetSimDetailsService" />
+    </port>
+  </service>
+  <service name="SetUserDetailsService">
+    <port name="SetUserDetailsPort" binding="tns:SetUserDetailsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SetUserDetailsService" />
+    </port>
+  </service>
+  <service name="SubmitReportRequestService">
+    <port name="SubmitReportRequestPort" binding="tns:SubmitReportRequestPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/ReportRequestService" />
+    </port>
+  </service>
+  <service name="RetrieveReportService">
+    <port name="RetrieveReportPort" binding="tns:RetrieveReportPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/RetrieveReportService" />
+    </port>
+  </service>
+  <service name="SubmitWUTriggerService">
+    <port name="SubmitWUTriggerPort" binding="tns:SubmitWUTriggerPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/WUTriggerService" />
+    </port>
+  </service>
+  <service name="SubmitWUTriggerv2Service">
+    <port name="SubmitWUTriggerv2Port" binding="tns:SubmitWUTriggerv2PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/WUTriggerv2Service" />
+    </port>
+  </service>
+  <service name="SubmitWUTriggerv3Service">
+    <port name="SubmitWUTriggerv3Port" binding="tns:SubmitWUTriggerv3PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/WUTriggerv3Service" />
+    </port>
+  </service>
+  <service name="SubmitSimWUTriggerService">
+    <port name="SubmitSimWUTriggerPort" binding="tns:SubmitSimWUTriggerPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SIMWUTriggerService" />
+    </port>
+  </service>
+  <service name="GetVpnGroupListService">
+    <port name="GetVpnGroupListPort" binding="tns:GetVpnGroupListPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetVpnGroupListService" />
+    </port>
+  </service>
+  <service name="GetDeviceLocationHistoryDetailsService">
+    <port name="GetDeviceLocationHistoryDetailsPort" binding="tns:GetDeviceLocationHistoryDetailsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetDeviceLocationHistoryDetailsService" />
+    </port>
+  </service>
+  <service name="GetSimLocationHistoryDetailsService">
+    <port name="GetSimLocationHistoryDetailsPort" binding="tns:GetSimLocationHistoryDetailsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetSimLocationHistoryDetailsService" />
+    </port>
+  </service>
+  <service name="GetCustomerServiceProfileDetailsv4">
+    <port name="GetCustomerServiceProfileDetailsv4Port" binding="tns:GetCustomerServiceProfileDetailsv4PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetCustomerServiceProfileDetailsv4Service" />
+    </port>
+  </service>
+  <service name="GetCustomerServiceProfileDetailsv5">
+    <port name="GetCustomerServiceProfileDetailsv5Port" binding="tns:GetCustomerServiceProfileDetailsv5PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetCustomerServiceProfileDetailsv5Service" />
+    </port>
+  </service>
+  <service name="SetCustomerServiceProfileDetailsv5Service">
+    <port name="SetCustomerServiceProfileDetailsv5Port" binding="tns:SetCustomerServiceProfileDetailsv5PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/SetCustomerServiceProfileDetailsv5Service" />
+    </port>
+  </service>
+  <service name="CloneCustomerServiceProfilev5Service">
+    <port name="CloneCustomerServiceProfilev5Port" binding="tns:CloneCustomerServiceProfilev5PortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/CloneCustomerServiceProfilev5Service" />
+    </port>
+  </service>
+  <service name="GetDeviceLocationDetailsService">
+    <port name="GetDeviceLocationDetailsPort" binding="tns:GetDeviceLocationDetailsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/GetDeviceLocationDetailsService" />
+    </port>
+  </service>
+  <service name="getSimLocationDetailsService">
+    <port name="getSimLocationDetailsPort" binding="tns:getSimLocationDetailsPortBinding">
+      <soap:address location="http://localhost:${HttpDefaultPort}/GDSPWebServices/getSimLocationDetailsService" />
+    </port>
+  </service>
+</definitions>

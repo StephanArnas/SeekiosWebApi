@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="seekios_dbModelStoreContainer" CdmEntityContainer="seekios_dbEntities">
+    <EntitySetMapping Name="seekiosInstruction">
+      <EntityTypeMapping TypeName="seekios_dbModel.seekiosInstruction">
+        <MappingFragment StoreEntitySet="seekiosInstruction">
+          <ScalarProperty Name="idseekiosInstruction" ColumnName="idseekiosInstruction" />
+          <ScalarProperty Name="instruction" ColumnName="instruction" />
+          <ScalarProperty Name="dateCreation" ColumnName="dateCreation" />
+          <ScalarProperty Name="seekiosProduction_idseekiosProduction" ColumnName="seekiosProduction_idseekiosProduction" />
+          <ScalarProperty Name="instructionType" ColumnName="instructionType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mode">
+      <EntityTypeMapping TypeName="seekios_dbModel.mode">
+        <MappingFragment StoreEntitySet="mode">
+          <ScalarProperty Name="device_iddevice" ColumnName="device_iddevice" />
+          <ScalarProperty Name="statusDefinition_idstatusDefinition" ColumnName="statusDefinition_idstatusDefinition" />
+          <ScalarProperty Name="modeDefinition_idmodeDefinition" ColumnName="modeDefinition_idmodeDefinition" />
+          <ScalarProperty Name="seekios_idseekios" ColumnName="seekios_idseekios" />
+          <ScalarProperty Name="lastTriggeredAlertDate" ColumnName="lastTriggeredAlertDate" />
+          <ScalarProperty Name="countOfTriggeredAlert" ColumnName="countOfTriggeredAlert" />
+          <ScalarProperty Name="trame" ColumnName="trame" />
+          <ScalarProperty Name="dateModeCreation" ColumnName="dateModeCreation" />
+          <ScalarProperty Name="idmode" ColumnName="idmode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="device">
+      <EntityTypeMapping TypeName="seekios_dbModel.device">
+        <MappingFragment StoreEntitySet="device">
+          <ScalarProperty Name="user_iduser" ColumnName="user_iduser" />
+          <ScalarProperty Name="countryCode" ColumnName="countryCode" />
+          <ScalarProperty Name="doNotDisturb" ColumnName="doNotDisturb" />
+          <ScalarProperty Name="uidDevice" ColumnName="uidDevice" />
+          <ScalarProperty Name="lastUseDate" ColumnName="lastUseDate" />
+          <ScalarProperty Name="notificationPlayerId" ColumnName="notificationPlayerId" />
+          <ScalarProperty Name="macAdress" ColumnName="macAdress" />
+          <ScalarProperty Name="plateform" ColumnName="plateform" />
+          <ScalarProperty Name="os" ColumnName="os" />
+          <ScalarProperty Name="deviceName" ColumnName="deviceName" />
+          <ScalarProperty Name="iddevice" ColumnName="iddevice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

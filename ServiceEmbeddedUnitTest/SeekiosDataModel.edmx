@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="seekios_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="device">
+          <Key>
+            <PropertyRef Name="iddevice" />
+          </Key>
+          <Property Name="iddevice" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="deviceName" Type="varchar" MaxLength="45" />
+          <Property Name="os" Type="varchar" MaxLength="150" />
+          <Property Name="plateform" Type="varchar" MaxLength="45" />
+          <Property Name="macAdress" Type="varchar" MaxLength="45" />
+          <Property Name="notificationPlayerId" Type="varchar" MaxLength="200" />
+          <Property Name="lastUseDate" Type="datetime" Nullable="false" />
+          <Property Name="uidDevice" Type="varchar" MaxLength="150" />
+          <Property Name="doNotDisturb" Type="int" Nullable="false" />
+          <Property Name="countryCode" Type="varchar" MaxLength="20" />
+          <Property Name="user_iduser" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mode">
+          <Key>
+            <PropertyRef Name="idmode" />
+          </Key>
+          <Property Name="idmode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="dateModeCreation" Type="datetime" />
+          <Property Name="trame" Type="varchar" MaxLength="2000" />
+          <Property Name="countOfTriggeredAlert" Type="int" />
+          <Property Name="lastTriggeredAlertDate" Type="datetime" />
+          <Property Name="seekios_idseekios" Type="int" Nullable="false" />
+          <Property Name="modeDefinition_idmodeDefinition" Type="int" Nullable="false" />
+          <Property Name="statusDefinition_idstatusDefinition" Type="int" Nullable="false" />
+          <Property Name="device_iddevice" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="seekiosInstruction">
+          <Key>
+            <PropertyRef Name="idseekiosInstruction" />
+          </Key>
+          <Property Name="idseekiosInstruction" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="instruction" Type="varchar" MaxLength="500" />
+          <Property Name="dateCreation" Type="datetime" Nullable="false" />
+          <Property Name="seekiosProduction_idseekiosProduction" Type="int" Nullable="false" />
+          <Property Name="instructionType" Type="int" />
+        </EntityType>
+        <EntityContainer Name="seekios_dbModelStoreContainer">
+          <EntitySet Name="device" EntityType="Self.device" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mode" EntityType="Self.mode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="seekiosInstruction" EntityType="Self.seekiosInstruction" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="seekios_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="seekiosInstruction">
+          <Key>
+            <PropertyRef Name="idseekiosInstruction" />
+          </Key>
+          <Property Name="idseekiosInstruction" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="instruction" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="dateCreation" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="seekiosProduction_idseekiosProduction" Type="Int32" Nullable="false" />
+          <Property Name="instructionType" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="seekios_dbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="seekiosInstruction" EntityType="Self.seekiosInstruction" />
+          <EntitySet Name="mode" EntityType="seekios_dbModel.mode" />
+          <EntitySet Name="device" EntityType="seekios_dbModel.device" />
+        </EntityContainer>
+        <EntityType Name="mode">
+          <Key>
+            <PropertyRef Name="idmode" />
+          </Key>
+          <Property Name="idmode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="dateModeCreation" Type="DateTime" Precision="3" />
+          <Property Name="trame" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="countOfTriggeredAlert" Type="Int32" />
+          <Property Name="lastTriggeredAlertDate" Type="DateTime" Precision="3" />
+          <Property Name="seekios_idseekios" Type="Int32" Nullable="false" />
+          <Property Name="modeDefinition_idmodeDefinition" Type="Int32" Nullable="false" />
+          <Property Name="statusDefinition_idstatusDefinition" Type="Int32" Nullable="false" />
+          <Property Name="device_iddevice" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="device">
+          <Key>
+            <PropertyRef Name="iddevice" />
+          </Key>
+          <Property Name="iddevice" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="deviceName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="os" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="plateform" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="macAdress" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="notificationPlayerId" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="lastUseDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="uidDevice" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="doNotDisturb" Type="Int32" Nullable="false" />
+          <Property Name="countryCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="user_iduser" Type="Int32" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="seekios_dbModelStoreContainer" CdmEntityContainer="seekios_dbEntities">
+          <EntitySetMapping Name="seekiosInstruction">
+            <EntityTypeMapping TypeName="seekios_dbModel.seekiosInstruction">
+              <MappingFragment StoreEntitySet="seekiosInstruction">
+                <ScalarProperty Name="idseekiosInstruction" ColumnName="idseekiosInstruction" />
+                <ScalarProperty Name="instruction" ColumnName="instruction" />
+                <ScalarProperty Name="dateCreation" ColumnName="dateCreation" />
+                <ScalarProperty Name="seekiosProduction_idseekiosProduction" ColumnName="seekiosProduction_idseekiosProduction" />
+                <ScalarProperty Name="instructionType" ColumnName="instructionType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mode">
+            <EntityTypeMapping TypeName="seekios_dbModel.mode">
+              <MappingFragment StoreEntitySet="mode">
+                <ScalarProperty Name="device_iddevice" ColumnName="device_iddevice" />
+                <ScalarProperty Name="statusDefinition_idstatusDefinition" ColumnName="statusDefinition_idstatusDefinition" />
+                <ScalarProperty Name="modeDefinition_idmodeDefinition" ColumnName="modeDefinition_idmodeDefinition" />
+                <ScalarProperty Name="seekios_idseekios" ColumnName="seekios_idseekios" />
+                <ScalarProperty Name="lastTriggeredAlertDate" ColumnName="lastTriggeredAlertDate" />
+                <ScalarProperty Name="countOfTriggeredAlert" ColumnName="countOfTriggeredAlert" />
+                <ScalarProperty Name="trame" ColumnName="trame" />
+                <ScalarProperty Name="dateModeCreation" ColumnName="dateModeCreation" />
+                <ScalarProperty Name="idmode" ColumnName="idmode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="device">
+            <EntityTypeMapping TypeName="seekios_dbModel.device">
+              <MappingFragment StoreEntitySet="device">
+                <ScalarProperty Name="user_iduser" ColumnName="user_iduser" />
+                <ScalarProperty Name="countryCode" ColumnName="countryCode" />
+                <ScalarProperty Name="doNotDisturb" ColumnName="doNotDisturb" />
+                <ScalarProperty Name="uidDevice" ColumnName="uidDevice" />
+                <ScalarProperty Name="lastUseDate" ColumnName="lastUseDate" />
+                <ScalarProperty Name="notificationPlayerId" ColumnName="notificationPlayerId" />
+                <ScalarProperty Name="macAdress" ColumnName="macAdress" />
+                <ScalarProperty Name="plateform" ColumnName="plateform" />
+                <ScalarProperty Name="os" ColumnName="os" />
+                <ScalarProperty Name="deviceName" ColumnName="deviceName" />
+                <ScalarProperty Name="iddevice" ColumnName="iddevice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
